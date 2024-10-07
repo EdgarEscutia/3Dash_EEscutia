@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gameManager.playerAcceleration = gameManager.playerAcceleration + 0.001f;
         transform.Translate(gameManager.moveVector * (gameManager.moveSpeed + gameManager.playerAcceleration) * Time.deltaTime);
     }
 }
