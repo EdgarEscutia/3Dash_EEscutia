@@ -6,6 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public float moveSpeed = 1.0f;
     public Vector3 moveVector;
-    public float playerAcceleration = 1.1f ;
+    public float playerAcceleration = 0.5f ;
 
 }
