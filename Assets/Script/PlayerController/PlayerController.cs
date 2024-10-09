@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference jump;
 
     public float moveSpeed = 5.0f;
-    //public Vector3 moveVector;
+    public Vector3 moveVector;
     public float playerAcceleration = 0.5f;
+    public float jumpSpeed;
+    bool salta = false;
 
     Rigidbody rb;
 
@@ -21,10 +23,15 @@ public class PlayerController : MonoBehaviour
          rb = GetComponent<Rigidbody>();
 
     }
-
     void Update()
     {
-        //int layerMask = 1 << 7;
+
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            salta = true;
+        }
+            //int layerMask = 1 << 7;
 
             //// Does the ray intersect any objects which are in layer 8?
             ////layerMask = ~layerMask;
@@ -40,12 +47,20 @@ public class PlayerController : MonoBehaviour
             //    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
             //    Debug.Log("Did not Hit");
             //}
-    }
+        }
     private void FixedUpdate()
     {
-       Vector3 moveVector = new Vector3(1, 0, 0);
+        if (salta == true)
+        {
+            GetComponent<Rigidbody>().velocity += jumpSpeed * Vector3.up;
+            salta = false;
+        }
+        
+
+        Vector3 moveVector = new Vector3(1, 0, 0);
         rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed + playerAcceleration));
         playerAcceleration = playerAcceleration + 0.01f;
     }
-
+    
+    
 }
