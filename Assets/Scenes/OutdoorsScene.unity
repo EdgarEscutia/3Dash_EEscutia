@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2260.9495, g: 2402.2815, b: 3499.5474, a: 1}
+  m_IndirectSpecularColor: {r: 2263.3596, g: 2404.7659, b: 3502.2231, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3925,7 +3925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882646153}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00952021, y: 0.23421524, z: -0.0022936908, w: 0.9721355}
+  m_LocalRotation: {x: 0.009520187, y: 0.23421524, z: -0.0022936852, w: 0.9721355}
   m_LocalPosition: {x: -21.59, y: 3.039, z: -9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5830,6 +5830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f9a92a9bea4f442bd83977923d7ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 1592164437}
 --- !u!4 &1308127697
 Transform:
   m_ObjectHideFlags: 0
@@ -6866,10 +6867,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: {fileID: -1990176573162812314, guid: 6a281681ec83d804c82899e45a431370, type: 3}
-  moveSpeed: 3
+  moveSpeed: 4
   moveVector: {x: 0, y: 0, z: 0}
   playerAcceleration: 0.5
   jumpSpeed: 5.5
+  respawnPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1594989738
 GameObject:
   m_ObjectHideFlags: 0
@@ -7376,7 +7378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00952021, y: 0.23421524, z: -0.0022936908, w: 0.9721355}
+  m_LocalRotation: {x: 0.009520187, y: 0.23421524, z: -0.0022936852, w: 0.9721355}
   m_LocalPosition: {x: -21.59, y: 3.039, z: -9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
