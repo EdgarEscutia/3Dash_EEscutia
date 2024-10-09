@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference jump;
 
     public float moveSpeed = 5.0f;
-    public Vector3 moveVector;
+    //public Vector3 moveVector;
     public float playerAcceleration = 0.5f;
 
     Rigidbody rb;
@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.Move(moveVector * ( moveSpeed + playerAcceleration));
+       Vector3 moveVector = new Vector3(1, 0, 0);
+        rb.MovePosition(transform.position + moveVector *Time.deltaTime * (moveSpeed + playerAcceleration));
         
     }
 
