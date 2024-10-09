@@ -24,14 +24,28 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed + playerAcceleration));
-        playerAcceleration = playerAcceleration + 0.01f;
+        //int layerMask = 1 << 7;
+
+            //// Does the ray intersect any objects which are in layer 8?
+            ////layerMask = ~layerMask;
+            //RaycastHit hit;
+
+            //if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+            //{
+            //    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.white);
+            //    Debug.Log("Did Hit");
+            //}
+            //else
+            //{
+            //    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            //    Debug.Log("Did not Hit");
+            //}
     }
     private void FixedUpdate()
     {
        Vector3 moveVector = new Vector3(1, 0, 0);
-        rb.MovePosition(transform.position + moveVector *Time.deltaTime * (moveSpeed + playerAcceleration));
-        
+        rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed + playerAcceleration));
+        playerAcceleration = playerAcceleration + 0.01f;
     }
 
 }
