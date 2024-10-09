@@ -7,22 +7,30 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    //[Header("Input Actions")]
-    //[SerializeField] InputActionReference jump;
+    [Header("Input Actions")]
+    [SerializeField] InputActionReference jump;
 
-    GameManager gameManager;
+    public float moveSpeed = 5.0f;
+    public Vector3 moveVector;
+    public float playerAcceleration = 0.5f;
 
-    // Start is called before the first frame update
+    Rigidbody rb;
+
     void Start()
     {
-        GameObject gameController = GameObject.FindGameObjectWithTag("GameController");
-        gameManager = gameController.GetComponent<GameManager>();
+         rb = GetComponent<Rigidbody>();
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        gameManager.playerAcceleration = gameManager.playerAcceleration + 0.01f;
-        transform.Translate(gameManager.moveVector * (gameManager.moveSpeed + gameManager.playerAcceleration) * Time.deltaTime);
+        //rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed + playerAcceleration));
+        playerAcceleration = playerAcceleration + 0.01f;
     }
+    private void FixedUpdate()
+    {
+        rb.Move(moveVector * ( moveSpeed + playerAcceleration));
+        
+    }
+
 }
