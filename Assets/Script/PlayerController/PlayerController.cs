@@ -39,11 +39,15 @@ public class PlayerController : MonoBehaviour
         transform.position = respawnPos;
 
     }
+    //bool IsGrounded()
+    //{
+    //    return rb.velocity.y <= 0;
+    //}
     void Update()
     {
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) /*&& IsGrounded()*/)
         {
             salta = true;
         }
