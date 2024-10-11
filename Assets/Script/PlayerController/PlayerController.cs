@@ -1,4 +1,5 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public GameManager gameManager;
 
     [Header("Mesures")]
     public float moveSpeed = 5.0f;
@@ -20,12 +21,14 @@ public class PlayerController : MonoBehaviour
     public Vector3 respawnPos;
 
     Rigidbody rb;
+    bool isGrounded;
 
+   
     void Start()
     {
          rb = GetComponent<Rigidbody>();
         respawnPos = transform.position;
-
+       
     }
     public void AccelerationNull()
     { 
@@ -39,18 +42,34 @@ public class PlayerController : MonoBehaviour
         transform.position = respawnPos;
 
     }
-    //bool IsGrounded()
-    //{
-    //    return rb.velocity.y <= 0;
-    //}
+   
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 7)
+        {
+            gameManager.SetStart();
+        }
+        if(other.gameObject.layer == 8)
+        {
+            isGrounded= true;   
+        }
+    }
+
+    public void OnDestroy()
+    {
+        Destroy(GetComponent<Rigidbody>());
+    }
     void Update()
     {
-
-
-        if (Input.GetKeyDown(KeyCode.Space) /*&& IsGrounded()*/)
+        if(isGrounded)
         {
-            salta = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {            
+                salta = true;
+                isGrounded = false;
+            }
         }
+        
             //int layerMask = 1 << 7;
 
             //// Does the ray intersect any objects which are in layer 8?
