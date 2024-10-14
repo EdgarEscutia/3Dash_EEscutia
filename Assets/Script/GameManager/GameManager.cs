@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,6 +17,12 @@ public class GameManager : MonoBehaviour
 
     public Particle particle;
 
+
+    [SerializeField] CinemachineVirtualCamera camara_Red;
+    [SerializeField] CinemachineVirtualCamera camara_Blue;
+
+    [SerializeField] Camera mainCamara;
+
     void Start()
     {
         //scoreDead = GetComponent<TMP_Text>();
@@ -29,27 +36,43 @@ public class GameManager : MonoBehaviour
         deathCount++;
     }
 
-    public void SumarParticulasRojas()
+    public bool SumarParticulasRojas()
     {
         if(particle.particle_Red == 5)
         {
             Debug.Log("Particulas rojas llenas");
+            return true;
+            
         }
         else
         {
             particle.particle_Red++;
+            return false;
         }
+       
         
     }
-    public void SumarParticulasAzules()
+
+    public void activarRojo()
+    {
+           
+    }
+    public void activarAzul()
+    {
+
+    }
+
+    public bool SumarParticulasAzules()
     {
         if (particle.particle_Blue == 5)
         {
             Debug.Log("Particulas azules llenas");
+            return true;
         }
         else
         {
             particle.particle_Blue++;
+            return false;
         }
     }
     

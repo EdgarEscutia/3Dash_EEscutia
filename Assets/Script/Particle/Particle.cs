@@ -11,27 +11,15 @@ public class Particle : MonoBehaviour
     public int particle_Red;
     public int particle_Blue;
 
-    [SerializeField] CinemachineVirtualCamera camara_Red;
-    [SerializeField] CinemachineVirtualCamera camara_Blue;
 
-    [SerializeField] Camera mainCamara;
     public void particleRed()
     {
-        //if(particle_Red == 5)
-        //{
-            camara_Red.enabled = true;
-            camara_Red.Priority = 30;
 
             playerController.moveSpeed = playerController.inicialMoveSpeed * 1.5f;     
     }
     public void particleBlue()
     {
-        //if(particle_Blue == 5)
-        //{
-        //camara_Red.enabled = false;
 
-        //camara_Blue.enabled = true;
-        //camara_Blue.Priority = 30;
         playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
                 
     }

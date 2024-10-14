@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    [SerializeField] Particle particle;
+
+    public GameManager gameManager;
+    public Particle particle;
+
 
     [SerializeField] CinemachineVirtualCamera camara_Red;
     [SerializeField] CinemachineVirtualCamera camara_Blue;
