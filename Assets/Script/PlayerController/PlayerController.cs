@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     [Header("Mesures")]
 
     public GameManager gameManager;
+    public Particle particle;
 
+    public float inicialMoveSpeed = 5.0f;
     public float moveSpeed = 5.0f;
     public float playerAcceleration = 0.0f;
     public float jumpSpeed;
@@ -28,16 +30,20 @@ public class PlayerController : MonoBehaviour
    
     void Start()
     {
+        //INICIAR EL RIGIDBODY 
          rb = GetComponent<Rigidbody>();
+
+        //GUARDAR POSICION INICIAL
         respawnPos = transform.position;
+        
        
     }
 
     void Update()
     {
-        if (isGrounded)
+        if (isGrounded) // Saltar y isGrounded
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)) //TECLA DE SALTO
             {
                 salta = true;
                 isGrounded = false;
@@ -47,7 +53,7 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (salta == true)
+        if (salta == true) 
         {
             GetComponent<Rigidbody>().velocity += jumpSpeed * Vector3.up;
             salta = false;
@@ -56,17 +62,19 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveVector = new Vector3(1, 0, 0);
         rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed + playerAcceleration));
-        if (playerAcceleration < 5)
+
+        if (playerAcceleration < 5) //ACCELERACION LIMITE DE PERSONAJE
         {
             playerAcceleration = playerAcceleration + 0.01f;
         }
 
     }
-    public void AccelerationNull()
+    public void AccelerationNull() //FUNCION ACCELERACION
     { 
-        playerAcceleration = 0.0f; 
+        playerAcceleration = 0.0f;
+        moveSpeed = 5.0f;
     }
-    public void Respawn()
+    public void Respawn() //REVIVIR AL INICIO DEL NIVEL
     {
         
         rb.velocity = new Vector3(0, 0, 0);
@@ -75,27 +83,29 @@ public class PlayerController : MonoBehaviour
 
     }
    
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other) //COLLIDERS
     {
-        if (other.gameObject.layer == 7)
+        if (other.gameObject.layer == 7) //OBSTACULOS
         {
             gameManager.SetStart();
         }
-        if(other.gameObject.layer == 8)
+        if(other.gameObject.layer == 8) // GROUNDED
         {
             isGrounded= true;   
         }
-        if(other.gameObject.layer ==9)
+        if(other.gameObject.layer ==9) //PARTICULA ROJA
         {
             Debug.Log("Particle Red");
+            particle.particleRed();
         }
-        if (other.gameObject.layer == 10)
+        if (other.gameObject.layer == 10) //PARTICULA AZUL
         {
             Debug.Log("Particle Blue");
+            particle.particleBlue();
         }
     }
 
-    public void OnDestroy()
+    public void OnDestroy() //DESTRUIR EL RIGIDBODY
     {
         Destroy(GetComponent<Rigidbody>());
     }   
