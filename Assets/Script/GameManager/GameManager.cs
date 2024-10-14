@@ -21,12 +21,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera camara_Red;
     [SerializeField] CinemachineVirtualCamera camara_Blue;
 
-    [SerializeField] Camera mainCamara;
+    [SerializeField] CinemachineVirtualCamera camara_Principal;
 
     void Start()
     {
         //scoreDead = GetComponent<TMP_Text>();
         
+    }
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SetStart();
+        }
     }
     public void SetStart()
     {
@@ -36,52 +44,41 @@ public class GameManager : MonoBehaviour
         deathCount++;
     }
 
-    public bool SumarParticulasRojas()
+    public void SumarParticulasRojas()
     {
         if(particle.particle_Red == 5)
         {
-            Debug.Log("Particulas rojas llenas");
-            return true;
-            
+            activarRojo();
         }
         else
         {
             particle.particle_Red++;
-            return false;
         }
-       
-        
     }
 
-    public void activarRojo()
-    {
-           
-    }
-    public void activarAzul()
-    {
-
-    }
-
-    public bool SumarParticulasAzules()
+    public void SumarParticulasAzules()
     {
         if (particle.particle_Blue == 5)
         {
-            Debug.Log("Particulas azules llenas");
-            return true;
+            activarAzul();
         }
         else
         {
             particle.particle_Blue++;
-            return false;
         }
     }
-    
-    void Update()
+    public void activarRojo()
     {
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SetStart();
-        }
+        camara_Red.Priority = 40;
+        camara_Red.enabled = true;
+        camara_Principal.enabled = false;
+        
+        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.5f;
     }
+    public void activarAzul()
+    {
+        playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
+    }
+
+    
 }
