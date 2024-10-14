@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreDead;
     public int deathCount = 1;
 
+    public Particle particle;
+
     void Start()
     {
         //scoreDead = GetComponent<TMP_Text>();
@@ -26,6 +28,31 @@ public class GameManager : MonoBehaviour
         scoreDead.text = $" ATTEMPT  {deathCount}";
         deathCount++;
     }
+
+    public void SumarParticulasRojas()
+    {
+        if(particle.particle_Red == 5)
+        {
+            Debug.Log("Particulas rojas llenas");
+        }
+        else
+        {
+            particle.particle_Red++;
+        }
+        
+    }
+    public void SumarParticulasAzules()
+    {
+        if (particle.particle_Blue == 5)
+        {
+            Debug.Log("Particulas azules llenas");
+        }
+        else
+        {
+            particle.particle_Blue++;
+        }
+    }
+    
     void Update()
     {
 

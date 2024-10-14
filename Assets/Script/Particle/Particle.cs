@@ -19,13 +19,10 @@ public class Particle : MonoBehaviour
     {
         //if(particle_Red == 5)
         //{
-            //camara_Red.enabled = true;
-            //camara_Red.Priority = 30;
+            camara_Red.enabled = true;
+            camara_Red.Priority = 30;
 
-            playerController.moveSpeed = playerController.inicialMoveSpeed * 2;
-        
-       
-            Debug.Log(playerController.moveSpeed);
+            playerController.moveSpeed = playerController.inicialMoveSpeed * 1.5f;     
     }
     public void particleBlue()
     {
@@ -35,10 +32,8 @@ public class Particle : MonoBehaviour
 
         //camara_Blue.enabled = true;
         //camara_Blue.Priority = 30;
-        playerController.moveSpeed = playerController.inicialMoveSpeed / 2;
-        
-        
-        Debug.Log(playerController.moveSpeed);
+        playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
+                
     }
     void Start()
     {

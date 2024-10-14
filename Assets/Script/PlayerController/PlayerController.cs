@@ -95,13 +95,11 @@ public class PlayerController : MonoBehaviour
         }
         if(other.gameObject.layer ==9) //PARTICULA ROJA
         {
-            Debug.Log("Particle Red");
-            particle.particleRed();
+            gameManager.SumarParticulasRojas();
         }
         if (other.gameObject.layer == 10) //PARTICULA AZUL
         {
-            Debug.Log("Particle Blue");
-            particle.particleBlue();
+            gameManager.SumarParticulasAzules();
         }
     }
 
