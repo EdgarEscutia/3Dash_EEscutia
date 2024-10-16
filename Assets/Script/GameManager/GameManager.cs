@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreDead;
     public int deathCount = 1;
 
+
+
+
     public Particle particle;
 
 
@@ -40,8 +43,15 @@ public class GameManager : MonoBehaviour
     {
         playerController.Respawn();
         playerController.AccelerationNull();
+        RestartParticle();
         scoreDead.text = $" ATTEMPT  {deathCount}";
         deathCount++;
+    }
+
+    public void RestartParticle()
+    {
+        particle.particle_Red = 0;
+        particle.particle_Blue = 0;
     }
 
     public void SumarParticulasRojas()
@@ -71,13 +81,15 @@ public class GameManager : MonoBehaviour
     {
         camara_Red.Priority = 40;
         camara_Red.enabled = true;
-        camara_Principal.enabled = false;
+        //camara_Principal.enabled = false;
         
         playerController.moveSpeed = playerController.inicialMoveSpeed * 1.5f;
+        particle.particle_Red = 0;
     }
     public void activarAzul()
     {
         playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
+        particle.particle_Red = 0;
     }
 
     

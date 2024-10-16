@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public float playerAcceleration = 0.0f;
     public float jumpSpeed;
 
+  
+
     bool salta = false;
     bool isGrounded;
 
@@ -80,6 +82,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0);
         rb.angularVelocity = Vector3.zero;
         transform.position = respawnPos;
+
 
     }
    
