@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2260.1702, g: 2401.9104, b: 3499.813, a: 1}
+  m_IndirectSpecularColor: {r: 2262.9026, g: 2404.4104, b: 3501.8872, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1682,7 +1682,7 @@ Transform:
   m_GameObject: {fileID: 263988274}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.15, y: 21.506786, z: -191.15526}
+  m_LocalPosition: {x: 10.15, y: 21.5, z: -191.15526}
   m_LocalScale: {x: 0.4703, y: 0.4703, z: 0.4703}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1904,7 +1904,7 @@ Transform:
   m_GameObject: {fileID: 372163912}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.338558, y: -33.18, z: 190.30804}
+  m_LocalPosition: {x: 26.338558, y: -33.25, z: 190.30804}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5571,8 +5571,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7956705206436317242, guid: d58282c52d5b8ab498230995e1a8c4aa,
         type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956705206436317242, guid: d58282c52d5b8ab498230995e1a8c4aa,
+        type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5775,7 +5780,7 @@ PrefabInstance:
     - target: {fileID: 7956705206436317242, guid: d58282c52d5b8ab498230995e1a8c4aa,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9095,7 +9100,7 @@ MonoBehaviour:
   inicialMoveSpeed: 5
   moveSpeed: 5
   playerAcceleration: 0.5
-  jumpSpeed: 5.5
+  jumpSpeed: 14
   moveVector: {x: 0, y: 0, z: 0}
   respawnPos: {x: 0, y: 0, z: 0}
 --- !u!65 &1592164438
@@ -9315,7 +9320,7 @@ PrefabInstance:
     - target: {fileID: 7956705206436317242, guid: d58282c52d5b8ab498230995e1a8c4aa,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10587,7 +10592,7 @@ Transform:
   m_GameObject: {fileID: 1890267248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.29, y: -22.67, z: 191.20787}
+  m_LocalPosition: {x: 1.94, y: -13.27, z: 191.20787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

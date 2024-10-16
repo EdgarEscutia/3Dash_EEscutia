@@ -1,4 +1,5 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,11 +17,9 @@ public class GameManager : MonoBehaviour
     public int deathCount = 1;
 
 
-
-
     public Particle particle;
 
-
+    [Header("CAMARAS")]
     [SerializeField] CinemachineVirtualCamera camara_Red;
     [SerializeField] CinemachineVirtualCamera camara_Blue;
 
@@ -28,7 +27,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //scoreDead = GetComponent<TMP_Text>();
         
     }
     void Update()
@@ -38,6 +36,9 @@ public class GameManager : MonoBehaviour
         {
             SetStart();
         }
+        ActivarBottonRojo();
+        ActivarBottonAzul();
+        Debug.Log(particle.particle_Red);
     }
     public void SetStart()
     {
@@ -68,13 +69,32 @@ public class GameManager : MonoBehaviour
         camara_Blue.enabled = false;
        
     }
+
+
+    public void ActivarBottonRojo() //BOTON ROJO
+    {
+        if (Input.GetKeyDown(KeyCode.T) && particle.particle_Red == 5)
+        {
+            Debug.Log("Activar P. Red");
+            activarRojo();
+        }
+    }
+    public void ActivarBottonAzul() //BOTON AZUL
+     {
+        if (Input.GetKeyDown(KeyCode.T) && particle.particle_Blue == 5)
+        {
+            Debug.Log("Activar P. Red");
+            activarAzul();
+        }
+    }
     public void SumarParticulasRojas()
     {
         if(particle.particle_Red == 5)
         {
-            activarRojo();
+            Debug.Log("Particle red == 5");
+           
         }
-        else
+        else if(particle.particle_Red < 5)
         {
             particle.particle_Red++;
         }
@@ -84,9 +104,12 @@ public class GameManager : MonoBehaviour
     {
         if (particle.particle_Blue == 5)
         {
-            activarAzul();
+           
+            Debug.Log("Activar P. Blue");
+                
+            
         }
-        else
+        else if (particle.particle_Blue < 5)
         {
             particle.particle_Blue++;
         }
@@ -108,6 +131,7 @@ public class GameManager : MonoBehaviour
 
         playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
         particle.particle_Red = 0;
+        RestartParticle();
     }
 
     
