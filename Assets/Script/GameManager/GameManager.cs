@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
             activarAzul();
         }
     }
-    public void SumarParticulasRojas()
+    public void SumarParticulasRojas() //SUMAR ROJO
     {
         if(particle.particle_Red == 5)
         {
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SumarParticulasAzules()
+    public void SumarParticulasAzules() //SUMAR AZUL
     {
         if (particle.particle_Blue == 5)
         {
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
             particle.particle_Blue++;
         }
     }
-    public void activarRojo()
+    public void activarRojo() //ACTIVAR ROJO
     {
         camara_Red.Priority = 40;
         camara_Red.enabled = true;
@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour
         playerController.moveSpeed = playerController.inicialMoveSpeed * 1.5f;
         particle.particle_Red = 0;
     }
-    public void activarAzul() 
+    public void activarAzul() //ACTIVAR AZUL
     {
         camara_Blue.Priority = 40;
         camara_Blue.enabled = true;
@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
 
         playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
         particle.particle_Red = 0;
+
         RestartParticle();
     }
 

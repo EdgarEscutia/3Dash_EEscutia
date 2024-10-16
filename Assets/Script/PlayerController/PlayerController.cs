@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     }
     public void AccelerationNull() //FUNCION ACCELERACION
-    { 
+    {
         playerAcceleration = 0.0f;
         moveSpeed = 5.0f;
     }
