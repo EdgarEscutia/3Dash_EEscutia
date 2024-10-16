@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         ActivarBottonRojo();
         ActivarBottonAzul();
         Debug.Log(particle.particle_Red);
+        Debug.Log(particle.particle_Blue);
     }
     public void SetStart()
     {
