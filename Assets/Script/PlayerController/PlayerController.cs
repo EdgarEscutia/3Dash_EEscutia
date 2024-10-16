@@ -9,17 +9,20 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Mesures")]
 
+    [Header("FICHEROS")]
     public GameManager gameManager;
     public Particle particle;
 
+    [Header("VELOCIDAD")]
     public float inicialMoveSpeed = 5.0f;
     public float moveSpeed = 5.0f;
-    public float playerAcceleration = 0.0f;
-    public float jumpSpeed;
 
-  
+    [Header("ACELERACION")]
+    public float playerAcceleration = 0.0f;
+    
+    [Header("SALTO")]
+    public float jumpSpeed;
 
     bool salta = false;
     bool isGrounded;
