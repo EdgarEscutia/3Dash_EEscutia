@@ -1,0 +1,34 @@
+{
+    "name": "InputAction",
+    "maps": [
+        {
+            "name": "Skip",
+            "id": "b02c6ee4-53ff-4e44-80ac-250bba4450c5",
+            "actions": [
+                {
+                    "name": "skip",
+                    "type": "Button",
+                    "id": "94f4b6f1-2ebc-47e4-a43c-a1ca711c4046",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b94f6039-eebe-4d43-af67-631775bb23e3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
