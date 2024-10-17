@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button opciones;
     [SerializeField] Button salir;
 
-    [SerializeField] string Nivel1;
+    [SerializeField] string Prototipo;
 
     public void OnEnable()
     {
@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
 
     void EscenaJugar()
     {
-        SceneManager.LoadScene(Nivel1);
+        SceneManager.LoadScene(Prototipo);
     }
     void EscenaOpciones()
     {

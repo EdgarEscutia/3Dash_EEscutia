@@ -639,7 +639,7 @@ MonoBehaviour:
   jugar: {fileID: 786240880}
   opciones: {fileID: 1873836299}
   salir: {fileID: 347384566}
-  Nivel1: Nivel1
+  Prototipo: Prototipo
 --- !u!114 &680773918
 MonoBehaviour:
   m_ObjectHideFlags: 0
