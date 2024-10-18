@@ -9,15 +9,15 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
-
+    [Header("LINKS")]
     public PlayerController playerController;
-    public float playerAcceleration;
+    public BarraEnergia barraEnergia;
+    public Particle particle;
 
+    [Header("RESETS")]
     public TMP_Text scoreDead;
     public int deathCount = 1;
 
-
-    public Particle particle;
 
     [Header("CAMARAS")]
     [SerializeField] CinemachineVirtualCamera camara_Red;
@@ -25,21 +25,16 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera camara_Principal;
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             SetStart();
+
         }
         ActivarBottonRojo();
         ActivarBottonAzul();
-        Debug.Log(particle.particle_Red);
-        Debug.Log(particle.particle_Blue);
     }
     public void SetStart()
     {
@@ -47,6 +42,7 @@ public class GameManager : MonoBehaviour
         playerController.AccelerationNull();
         RestartParticle();
         RestartCameras();
+        barraEnergia.Restart_Barra();
         scoreDead.text = $" ATTEMPT  {deathCount}";
         deathCount++;
     }
@@ -74,17 +70,17 @@ public class GameManager : MonoBehaviour
 
     public void ActivarBottonRojo() //BOTON ROJO
     {
-        if (Input.GetKeyDown(KeyCode.T) && particle.particle_Red == 5)
+        if (Input.GetKeyDown(KeyCode.T) && particle.particle_Red == 5 && barraEnergia.EnergiaActual == 100)
         {
-            Debug.Log("Activar P. Red");
+            barraEnergia.activarBarra();
             activarRojo();
         }
     }
     public void ActivarBottonAzul() //BOTON AZUL
      {
-        if (Input.GetKeyDown(KeyCode.T) && particle.particle_Blue == 5)
+        if (Input.GetKeyDown(KeyCode.T) && particle.particle_Blue == 5 && barraEnergia.EnergiaActual == 100)
         {
-            Debug.Log("Activar P. Red");
+            barraEnergia.activarBarra();
             activarAzul();
         }
     }
@@ -105,9 +101,8 @@ public class GameManager : MonoBehaviour
     {
         if (particle.particle_Blue == 5)
         {
-           
+
             Debug.Log("Activar P. Blue");
-                
             
         }
         else if (particle.particle_Blue < 5)
@@ -134,7 +129,5 @@ public class GameManager : MonoBehaviour
         particle.particle_Red = 0;
 
         RestartParticle();
-    }
-
-    
+    }  
 }
