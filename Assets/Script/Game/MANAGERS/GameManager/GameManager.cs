@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour
             barraEnergia.activarBarra();
             activarRojo();
             obstacleManager.ActivarObstacle();
+            
         }
     }
     public void ActivarBottonAzul() //BOTON AZUL
@@ -93,6 +94,7 @@ public class GameManager : MonoBehaviour
         {
             barraEnergia.activarBarra();
             activarAzul();
+            obstacleManager.DesactivarObstacle();
         }
     }
     public void SumarParticulasRojas() //SUMAR ROJO

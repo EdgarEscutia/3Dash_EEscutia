@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    public GameObject Obstacle;
+    public GameObject ObstacleDesactivar;
+    public GameObject ObstacleActivar;
 
     public void ActivarObstacle()
     {
-        Obstacle.SetActive(true);
+        ObstacleActivar.SetActive(true);
         Debug.Log("ACCTTTTIIIVVVAAAAADOOOOOOOOOO");
     }
     public void DesactivarObstacle()
     {
-        Obstacle.SetActive(false);
+        ObstacleDesactivar.SetActive(false);
         Debug.Log("DESACCCCCCCCCCCCTIVAAAAADDDOOOOOOO");
     }
 }
