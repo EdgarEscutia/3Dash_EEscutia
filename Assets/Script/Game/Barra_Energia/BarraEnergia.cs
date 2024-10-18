@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class BarraEnergia : MonoBehaviour
 {
-    public Image Energia;
+    public Image Energia; //Barra de Energia
 
-    public float EnergiaActual;
+    public float EnergiaActual; //Energia del player
 
-    public Canvas Canvas_EnergiaParticulas;
+    public Canvas Canvas_EnergiaParticulas; //Canvas activable
 
     bool start= false;
 

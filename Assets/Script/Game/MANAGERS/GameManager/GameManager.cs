@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public BarraEnergia barraEnergia;
     public Particle particle;
+    public ObstacleManager obstacleManager;
 
     [Header("RESETS")]
     public TMP_Text scoreDead;
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
         {
             barraEnergia.activarBarra();
             activarRojo();
+            obstacleManager.ActivarObstacle();
         }
     }
     public void ActivarBottonAzul() //BOTON AZUL
@@ -95,11 +97,7 @@ public class GameManager : MonoBehaviour
     }
     public void SumarParticulasRojas() //SUMAR ROJO
     {
-        if(particle.particle_Red == 5)
-        {
-           
-        }
-        else if(particle.particle_Red < 5)
+        if(particle.particle_Red < 5)
         {
             particle.particle_Red++;
         }
@@ -107,13 +105,7 @@ public class GameManager : MonoBehaviour
 
     public void SumarParticulasAzules() //SUMAR AZUL
     {
-        if (particle.particle_Blue == 5)
-        {
-
-            Debug.Log("Activar P. Blue");
-            
-        }
-        else if (particle.particle_Blue < 5)
+        if (particle.particle_Blue < 5)
         {
             particle.particle_Blue++;
         }
