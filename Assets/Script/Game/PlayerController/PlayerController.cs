@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
     bool salta = false;
     bool isGrounded;
 
-    public Vector3 moveVector;
-    public Vector3 respawnPos;
+    Vector3 moveVector;
+    Vector3 respawnPos;
 
     Rigidbody rb;
 

@@ -9,6 +9,9 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
+    // "Singleton"
+    public static GameManager instance;
+
     [Header("LINKS")]
     public PlayerController playerController;
     public BarraEnergia barraEnergia;
@@ -25,6 +28,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera camara_Principal;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Update()
     {
 
@@ -33,6 +41,7 @@ public class GameManager : MonoBehaviour
             SetStart();
 
         }
+       
         ActivarBottonRojo();
         ActivarBottonAzul();
     }
@@ -88,7 +97,6 @@ public class GameManager : MonoBehaviour
     {
         if(particle.particle_Red == 5)
         {
-            Debug.Log("Particle red == 5");
            
         }
         else if(particle.particle_Red < 5)
@@ -116,7 +124,7 @@ public class GameManager : MonoBehaviour
         camara_Red.enabled = true;
         camara_Principal.enabled = false;
 
-        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.5f;
+        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.8f;
         particle.particle_Red = 0;
     }
     public void activarAzul() //ACTIVAR AZUL

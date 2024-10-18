@@ -43,6 +43,7 @@ public class BarraEnergia : MonoBehaviour
         if(EnergiaActual <= 0)
         {
             Restart_Barra();
+            GameManager.instance.RestartCameras();
         }
 
         
