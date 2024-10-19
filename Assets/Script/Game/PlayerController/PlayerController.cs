@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     public Particle particle;
 
     [Header("VELOCIDAD")]
-    public float inicialMoveSpeed = 5.0f;
-    public float moveSpeed = 5.0f;
+    public float inicialMoveSpeed;
+    public float moveSpeed;
 
     [Header("ACELERACION")]
     public float playerAcceleration = 0.0f;
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
     public void AccelerationNull() //FUNCION ACCELERACION
     {
         playerAcceleration = 0.0f;
-        moveSpeed = 5.0f;
+        moveSpeed = 6.0f;
     }
     public void Respawn() //REVIVIR AL INICIO DEL NIVEL
     {

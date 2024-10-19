@@ -103,6 +103,10 @@ public class GameManager : MonoBehaviour
         {
             particle.particle_Red++;
         }
+        else
+        {
+            barraEnergia.ActivarBoton();
+        }
     }
 
     public void SumarParticulasAzules() //SUMAR AZUL
@@ -110,6 +114,10 @@ public class GameManager : MonoBehaviour
         if (particle.particle_Blue < 5)
         {
             particle.particle_Blue++;
+        }
+        else
+        {
+            barraEnergia.ActivarBoton();
         }
     }
     public void activarRojo() //ACTIVAR ROJO

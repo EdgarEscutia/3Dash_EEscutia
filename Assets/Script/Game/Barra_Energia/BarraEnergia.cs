@@ -11,10 +11,17 @@ public class BarraEnergia : MonoBehaviour
 
     public Canvas Canvas_EnergiaParticulas; //Canvas activable
 
+    public Canvas Boton_Particulas;
+
     bool start= false;
 
+    public void ActivarBoton()
+    {
+        Boton_Particulas.gameObject.SetActive(true);
+    }
     public void Start()
     {
+        Boton_Particulas.gameObject.SetActive(false);
         Canvas_EnergiaParticulas.gameObject.SetActive(false);
         EnergiaActual = 100;
         start = false;
@@ -29,6 +36,7 @@ public class BarraEnergia : MonoBehaviour
 
     public void activarBarra()
     {
+        Boton_Particulas.gameObject.SetActive(false);
         Canvas_EnergiaParticulas.gameObject.SetActive(true);
         Energia.fillAmount = EnergiaActual / 100f;
         start = true;
