@@ -103,7 +103,6 @@ public class GameManager : MonoBehaviour
         if(particle.particle_Red < 5)
         {
             particle.particle_Red++;
-            Destroy(this);
         }
         else
         {

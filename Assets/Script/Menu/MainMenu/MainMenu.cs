@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
     void EscenaSalir()
     {
         Application.Quit();
-        EditorApplication.isPlaying = false;
+        //EditorApplication.isPlaying = false;
     }
         // Update is called once per frame
     void Update()
