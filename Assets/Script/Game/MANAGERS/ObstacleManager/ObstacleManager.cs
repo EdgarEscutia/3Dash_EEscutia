@@ -12,6 +12,11 @@ public class ObstacleManager : MonoBehaviour
         ObstacleActivar.SetActive(true);
         Debug.Log("ACCTTTTIIIVVVAAAAADOOOOOOOOOO");
     }
+    public void RestartObstacles()
+    {
+        ObstacleActivar.SetActive(false);
+        ObstacleDesactivar.SetActive(true);
+    }
     public void DesactivarObstacle()
     {
         ObstacleDesactivar.SetActive(false);

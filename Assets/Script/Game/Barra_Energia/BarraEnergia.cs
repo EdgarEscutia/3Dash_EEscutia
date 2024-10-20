@@ -28,6 +28,7 @@ public class BarraEnergia : MonoBehaviour
     }
     public void Restart_Barra()
     {
+        Boton_Particulas.gameObject.SetActive(false);
         Canvas_EnergiaParticulas.gameObject.SetActive(false);
         EnergiaActual = 100;
         Energia.fillAmount = EnergiaActual / 100f;

@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         playerController.AccelerationNull();
         RestartParticle();
         RestartCameras();
+        obstacleManager.RestartObstacles();
         barraEnergia.Restart_Barra();
         scoreDead.text = $" ATTEMPT  {deathCount}";
         deathCount++;
