@@ -10,7 +10,6 @@ public class ObstacleManager : MonoBehaviour
     public void ActivarObstacle()
     {
         ObstacleActivar.SetActive(true);
-        Debug.Log("ACCTTTTIIIVVVAAAAADOOOOOOOOOO");
     }
     public void RestartObstacles()
     {
