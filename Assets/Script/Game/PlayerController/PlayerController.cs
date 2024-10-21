@@ -9,10 +9,13 @@ using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class PlayerController : MonoBehaviour
 {
+    // "Singleton"
+    public static PlayerController instance;
 
     [Header("FICHEROS")]
     public GameManager gameManager;
     public Particle particle;
+    public PortalManager portalManager;
 
     [Header("VELOCIDAD")]
     public float inicialMoveSpeed;
@@ -106,6 +109,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.layer == 10) //PARTICULA AZUL
         {
             gameManager.SumarParticulasAzules();
+        }
+        if(other.gameObject.layer == 11) //PORTAL ENTRADA
+        {
+            portalManager.SetStart();
         }
     }
 

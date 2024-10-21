@@ -19,6 +19,5 @@ public class ObstacleManager : MonoBehaviour
     public void DesactivarObstacle()
     {
         ObstacleDesactivar.SetActive(false);
-        Debug.Log("DESACCCCCCCCCCCCTIVAAAAADDDOOOOOOO");
     }
 }

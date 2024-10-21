@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public BarraEnergia barraEnergia;
     public Particle particle;
     public ObstacleManager obstacleManager;
+    public PortalManager portalManager;
+    public BarraPortal barraPortal;
 
     [Header("RESETS")]
     public TMP_Text scoreDead;
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
         playerController.AccelerationNull();
         RestartParticle();
         RestartCameras();
+        barraPortal.DesactivarBarra();
         obstacleManager.RestartObstacles();
         barraEnergia.Restart_Barra();
         scoreDead.text = $" ATTEMPT  {deathCount}";
