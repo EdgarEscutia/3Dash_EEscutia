@@ -9,12 +9,9 @@ public class PortalManager : MonoBehaviour
     public BarraEnergia barraEnergia;
     public BarraPortal barraPortal;
 
-    public bool salta;
+    public bool salta = true;
 
-    public void Start()
-    {
-        salta = true;
-    }
+
     public void SetStart()
     {
         gameManager.RestartParticle();
@@ -45,6 +42,8 @@ public class PortalManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        salta = true;
         
     }
 }

@@ -33,7 +33,7 @@ public class BarraPortal : MonoBehaviour
     }
     public void QuitarVidaPortal()
     {
-        VidaActual -= 30f;
+        VidaActual -= 10f;
         VidaPortal.fillAmount = VidaActual / 100f;
     }
     // Update is called once per frame
