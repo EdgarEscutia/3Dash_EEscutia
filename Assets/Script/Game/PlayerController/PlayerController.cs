@@ -114,6 +114,20 @@ public class PlayerController : MonoBehaviour
         {
             portalManager.SetStart();
         }
+        if (other.gameObject.layer == 12) //PORTAL ENTRADA
+        {
+            Debug.Log("Salida del portal");
+        }
+        if (other.gameObject.layer == 13) //PORTAL ENTRADA
+        {
+            Debug.Log("Cama Ordenada");
+            portalManager.AñadirBarraPortal();
+        }
+        if (other.gameObject.layer == 14) //PORTAL ENTRADA
+        {
+            Debug.Log("Cama Desordenada");
+            portalManager.QuitarBarraPortal();
+        }
     }
 
     public void OnDestroy() //DESTRUIR EL RIGIDBODY

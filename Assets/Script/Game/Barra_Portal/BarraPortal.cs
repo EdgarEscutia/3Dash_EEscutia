@@ -12,6 +12,8 @@ public class BarraPortal : MonoBehaviour
     public Canvas Canvas_BarraPortal;
 
     public bool salta = false;
+
+
     // Start is called before the first frame update
     
     public void DesactivarBarra()
@@ -23,6 +25,16 @@ public class BarraPortal : MonoBehaviour
         Canvas_BarraPortal.gameObject.SetActive(true);
         VidaActual = 100;
         salta = false;
+    }
+    public void AñadirVidaPortal()
+    {
+        VidaActual += 30f;
+        VidaPortal.fillAmount = VidaActual / 100f;
+    }
+    public void QuitarVidaPortal()
+    {
+        VidaActual -= 30f;
+        VidaPortal.fillAmount = VidaActual / 100f;
     }
     // Update is called once per frame
     void Update()
