@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4662043177245459320}
   - component: {fileID: 3098073063863529625}
   m_Layer: 8
-  m_Name: Cube_Left_Colider
+  m_Name: Collider_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
