@@ -28,7 +28,7 @@ public class BarraPortal : MonoBehaviour
     }
     public void AñadirVidaPortal()
     {
-        VidaActual += 30f;
+        VidaActual += 50f;
         VidaPortal.fillAmount = VidaActual / 100f;
     }
     public void QuitarVidaPortal()
