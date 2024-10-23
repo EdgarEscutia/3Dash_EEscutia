@@ -34,7 +34,10 @@ public class GameManager : MonoBehaviour
 
 
 
-
+    public void ActivarSiguienteChunk()
+    {
+        chunkManager.ColocarSiguienteChunk();
+    }
 
     private void Awake()
     {

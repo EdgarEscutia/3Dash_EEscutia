@@ -2,7 +2,6 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -132,6 +131,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.layer == 15) //CARGA SIGUIENTE PREFAB 
         {
+            gameManager.ActivarSiguienteChunk();
             Debug.Log("TRIGGER SIGUIENTE PREFAB");
         }
     }
