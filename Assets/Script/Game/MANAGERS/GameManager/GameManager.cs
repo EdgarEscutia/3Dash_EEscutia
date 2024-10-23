@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     [Header("LINKS")]
     public PlayerController playerController;
+    public ChunkManager chunkManager;
     public BarraEnergia barraEnergia;
     public Particle particle;
     public ObstacleManager obstacleManager;
@@ -30,6 +31,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera camara_Blue;
 
     [SerializeField] CinemachineVirtualCamera camara_Principal;
+
+
+
+
 
     private void Awake()
     {

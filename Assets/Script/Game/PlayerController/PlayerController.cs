@@ -2,8 +2,10 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 
@@ -127,6 +129,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Cama Desordenada");
             portalManager.QuitarBarraPortal();
+        }
+        if (other.gameObject.layer == 15) //CARGA SIGUIENTE PREFAB 
+        {
+            Debug.Log("TRIGGER SIGUIENTE PREFAB");
         }
     }
 
