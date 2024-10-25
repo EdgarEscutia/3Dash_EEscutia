@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     public void AccelerationNull() //FUNCION ACCELERACION
     {
         playerAcceleration = 0.0f;
-        moveSpeed = 5.0f;
+        moveSpeed = 10.0f * Time.deltaTime;
     }
     public void Respawn() //REVIVIR AL INICIO DEL NIVEL
     {

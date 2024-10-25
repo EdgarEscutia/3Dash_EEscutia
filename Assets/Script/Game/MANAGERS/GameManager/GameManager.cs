@@ -6,6 +6,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using Random = UnityEngine.Random;
+
+
+
 
 public class GameManager : MonoBehaviour
 {
@@ -138,7 +142,7 @@ public class GameManager : MonoBehaviour
         camara_Red.enabled = true;
         camara_Principal.enabled = false;
 
-        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.8f;
+        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.8f *Time.deltaTime;
         particle.particle_Red = 0;
     }
     public void activarAzul() //ACTIVAR AZUL
@@ -147,9 +151,32 @@ public class GameManager : MonoBehaviour
         camara_Blue.enabled = true;
         camara_Principal.enabled = false;
 
-        playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
+        playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f * Time.deltaTime;
         particle.particle_Red = 0;
 
         RestartParticle();
-    }  
+    }
+
+    public void RandomReset()
+    {
+        float guardado = playerController.moveSpeed;
+        playerController.moveSpeed = 0;
+
+        float randomNumber = (Random.Range(0, 2));
+        bool soloUnaVez = true;
+        
+        
+        if(randomNumber <= 0.5f && soloUnaVez == true) //MUERTO
+        {
+            soloUnaVez = false;
+            SetStart();
+        }
+
+        if(randomNumber > 0.5f && soloUnaVez == true) //REVIVE
+        {
+            barraPortal.AñadirVidaPortal();
+            soloUnaVez = false;
+            playerController.moveSpeed = guardado;
+        }
+    }
 }
