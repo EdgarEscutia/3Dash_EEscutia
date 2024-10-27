@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public PortalManager portalManager;
     public BarraPortal barraPortal;
 
+    public AutoGererateChunks autoGererateChunks;
+
     [Header("RESETS")]
     public TMP_Text scoreDead;
     public int deathCount = 1;
@@ -178,5 +180,10 @@ public class GameManager : MonoBehaviour
             soloUnaVez = false;
             playerController.moveSpeed = guardado;
         }
+    }
+
+    public void GenerateLevels()
+    {
+        autoGererateChunks.AutoGenerate();
     }
 }

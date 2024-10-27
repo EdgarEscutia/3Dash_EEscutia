@@ -121,18 +121,15 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.layer == 13) //PORTAL ENTRADA
         {
-            Debug.Log("Cama Ordenada");
             portalManager.AñadirBarraPortal();
         }
         if (other.gameObject.layer == 14) //PORTAL ENTRADA
-        {
-            Debug.Log("Cama Desordenada");
+        {            
             portalManager.QuitarBarraPortal();
         }
         if (other.gameObject.layer == 15) //CARGA SIGUIENTE PREFAB 
         {
-            gameManager.ActivarSiguienteChunk();
-            Debug.Log("TRIGGER SIGUIENTE PREFAB");
+            gameManager.GenerateLevels();           
         }
     }
 
