@@ -193,9 +193,14 @@ public class GameManager : MonoBehaviour
 
             contador++;
         }
-        else
+        if(contador == 0)
         {
             autoGererateChunks.AutoGenerate();
+            contador++;
+        }
+        else
+        {
+            autoGererateChunks.NextChunk();
         }
     }
 }
