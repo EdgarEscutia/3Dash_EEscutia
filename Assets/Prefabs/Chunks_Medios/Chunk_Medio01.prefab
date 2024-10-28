@@ -404,6 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9063951104771585931}
   - component: {fileID: 3446194102663042823}
+  - component: {fileID: 5117851756769499413}
   m_Layer: 15
   m_Name: Trigger_Siguiente_Chunk
   m_TagString: Untagged
@@ -447,6 +448,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0, y: 13.659887, z: 4.1619077}
   m_Center: {x: 0.5, y: -6.3299437, z: -0.40029263}
+--- !u!114 &5117851756769499413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8917745237903975313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337be4de0dcfaf44fae97d5aed99b988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &61401446278481094
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5298,6 +5298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6528183290038999788}
   - component: {fileID: 3326637924166856841}
+  - component: {fileID: 7118811800916014787}
   m_Layer: 0
   m_Name: Chunk_Dificil01
   m_TagString: Untagged
@@ -5448,6 +5449,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7118811800916014787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979791975744450470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 337be4de0dcfaf44fae97d5aed99b988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5133469261867958785
 GameObject:
   m_ObjectHideFlags: 0
