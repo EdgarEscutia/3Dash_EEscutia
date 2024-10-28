@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     public PortalManager portalManager;
 
     [Header("VELOCIDAD")]
-    public float inicialMoveSpeed;
-    public float moveSpeed;
+    public float inicialMoveSpeed = 6;
+    public float moveSpeed = 6;
 
     [Header("ACELERACION")]
     public float playerAcceleration = 0.0f;

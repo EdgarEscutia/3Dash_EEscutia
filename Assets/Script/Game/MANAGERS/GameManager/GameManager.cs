@@ -184,6 +184,9 @@ public class GameManager : MonoBehaviour
 
     public void GenerateLevels()
     {
+       
         autoGererateChunks.AutoGenerate();
+    
+        
     }
 }
