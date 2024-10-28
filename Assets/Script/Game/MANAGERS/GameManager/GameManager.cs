@@ -2,6 +2,7 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -184,9 +185,17 @@ public class GameManager : MonoBehaviour
 
     public void GenerateLevels()
     {
-       
-        autoGererateChunks.AutoGenerate();
-    
-        
+        int contador = 0;
+
+        if(contador == 5)
+        {
+            autoGererateChunks.AutoGenerateMeta();
+
+            contador++;
+        }
+        else
+        {
+            autoGererateChunks.AutoGenerate();
+        }
     }
 }

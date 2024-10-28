@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     public void AccelerationNull() //FUNCION ACCELERACION
     {
         playerAcceleration = 0.0f;
-        moveSpeed = 10.0f * Time.deltaTime;
+        //moveSpeed = 10.0f * Time.deltaTime;
     }
     public void Respawn() //REVIVIR AL INICIO DEL NIVEL
     {
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.layer == 15) //CARGA SIGUIENTE PREFAB 
         {
-            gameManager.GenerateLevels();           
+            gameManager.GenerateLevels();        
         }
     }
 
