@@ -16,6 +16,7 @@ public class NavigateToAfterTimeOrPress : MonoBehaviour
        if(sceneCall)
        {
             SceneManager.LoadScene(NextScreen);
+            Debug.Log("Navigate");
        }       
     }
 
@@ -32,6 +33,7 @@ public class NavigateToAfterTimeOrPress : MonoBehaviour
     {       
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Nada");
             NavigateToNextScreen(); 
         }
     }

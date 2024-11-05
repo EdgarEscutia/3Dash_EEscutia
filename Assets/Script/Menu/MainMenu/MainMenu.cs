@@ -8,35 +8,41 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] Button jugar;
-    [SerializeField] Button opciones;
     [SerializeField] Button salir;
 
-    [SerializeField] string Prototipo;
+    public GameObject PantallaDeCarga;
+    public Slider slider;
+
 
     public void OnEnable()
     {
-        jugar.onClick.AddListener(EscenaJugar);
-        opciones.onClick.AddListener(EscenaOpciones);
+  
         salir.onClick.AddListener(EscenaSalir);
     }
 
-    void EscenaJugar()
+    public void CargarNivel(int NumeroDeEscena)
     {
-        SceneManager.LoadScene(Prototipo);
+        StartCoroutine(CargarAsync(NumeroDeEscena));
     }
-    void EscenaOpciones()
-    {
-        Debug.Log("Opciones");
-    }
+
     void EscenaSalir()
     {
         Application.Quit();
         //EditorApplication.isPlaying = false;
     }
-        // Update is called once per frame
-    void Update()
+
+    IEnumerator CargarAsync(int NumeroDeEscena)
     {
-        
+        AsyncOperation Operacion = SceneManager.LoadSceneAsync(NumeroDeEscena);
+    
+        PantallaDeCarga.SetActive(true);
+
+        while (!Operacion.isDone)
+        {
+            float Progreso = Mathf.Clamp01(Operacion.progress/ 0.9f);
+            slider.value = Progreso;
+            yield return null;
+        }
+    
     }
 }
