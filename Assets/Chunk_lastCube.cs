@@ -8,17 +8,22 @@ public class Chunk_lastCube : MonoBehaviour
     public GameObject UltimoCube;
     public GameObject trigger;
     //public GameObject[] nextChunk;
-
+    int opcion = 1;
     public void OnTriggerEnter()
-    {        
-        GameObject randomChunk = Chunks[Random.Range(0, 1)];
+    {
+        if(opcion == 1)
+        {
+            GameObject randomChunk = Chunks[Random.Range(0, Chunks.Length)];
 
-        //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
-        //Final = this.gameObject.transform.GetChild(5).gameObject;
-        Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
-        //Instantiate(Final);
-
-        trigger.SetActive(false);
+            //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
+            //Final = this.gameObject.transform.GetChild(5).gameObject;
+            Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
+            //Instantiate(Final);
+            
+            trigger.SetActive(false);
+            opcion = 0;
+        
+        }
         
     }
 }

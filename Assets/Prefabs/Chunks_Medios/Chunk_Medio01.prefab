@@ -404,7 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9063951104771585931}
   - component: {fileID: 3446194102663042823}
-  - component: {fileID: 5117851756769499413}
+  - component: {fileID: 688559182975510562}
   m_Layer: 15
   m_Name: Trigger_Siguiente_Chunk
   m_TagString: Untagged
@@ -448,7 +448,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0, y: 13.659887, z: 4.1619077}
   m_Center: {x: 0.5, y: -6.3299437, z: -0.40029263}
---- !u!114 &5117851756769499413
+--- !u!114 &688559182975510562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,9 +457,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8917745237903975313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 337be4de0dcfaf44fae97d5aed99b988, type: 3}
+  m_Script: {fileID: 11500000, guid: 64c40e143d1cd114ba5a8f2fab506d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Chunks:
+  - {fileID: 4942203956033653548, guid: f817d86ca9560ae4a858909ea098f5f6, type: 3}
+  - {fileID: 4979791975744450470, guid: 40f46a65e90531248a39e0dc5bf0d131, type: 3}
+  - {fileID: 2444366372201890662, guid: ee91fd444cc3a684cba9be322d43c1d0, type: 3}
+  UltimoCube: {fileID: 8861712117784305665}
+  trigger: {fileID: 8917745237903975313}
 --- !u!1001 &61401446278481094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1084,6 +1090,12 @@ PrefabInstance:
 --- !u!4 &8035015283703036498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 441583279851755943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8861712117784305665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8997050345873881510, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
     type: 3}
   m_PrefabInstance: {fileID: 441583279851755943}
   m_PrefabAsset: {fileID: 0}

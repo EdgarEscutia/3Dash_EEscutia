@@ -105,6 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Chunks:
   - {fileID: 4979791975744450470, guid: 40f46a65e90531248a39e0dc5bf0d131, type: 3}
+  - {fileID: 4942203956033653548, guid: f817d86ca9560ae4a858909ea098f5f6, type: 3}
+  - {fileID: 3799537757121364730, guid: 982d6150df95b9b48ab094c74afc4dcd, type: 3}
   UltimoCube: {fileID: 9201849616920223314}
   trigger: {fileID: 2300073848958998121}
 --- !u!1 &2444366372201890662
