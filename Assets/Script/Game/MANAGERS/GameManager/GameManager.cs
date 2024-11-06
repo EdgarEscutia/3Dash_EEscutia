@@ -39,7 +39,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera camara_Principal;
 
-
+    [Header("CANVAS")]
+    [SerializeField] Canvas MenuInGame;
 
     public void ActivarSiguienteChunk()
     {
@@ -58,6 +59,10 @@ public class GameManager : MonoBehaviour
         {
             SetStart();
 
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuInGame.GetComponent<Canvas>().enabled = true;
         }
        
         ActivarBottonRojo();
