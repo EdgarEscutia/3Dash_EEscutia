@@ -12,12 +12,17 @@ public class AutoGererateChunks : MonoBehaviour
 
     public GameObject triggers;
 
+
+    public Chunk_lastCube LastCube;
+    int randomNumber1;
+    int randomNumber2;
+
     public void AutoGenerate()
     {
-
-        int randomNumber = Random.Range(0, Chunks.Length);
         
-        GameObject randomChunk = Chunks[randomNumber];
+        randomNumber1 = Random.Range(0, Chunks.Length);
+
+        GameObject randomChunk = Chunks[randomNumber1];
 
         //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
         //Final = this.gameObject.transform.GetChild(5).gameObject;
@@ -25,16 +30,19 @@ public class AutoGererateChunks : MonoBehaviour
         //Instantiate(Final);
 
         triggers.SetActive(false);
+        //UltimoCube = 
+
+        LastChunk =  new GameObject[randomNumber1];
     }
 
 
     public void AutoGenerateMeta()
     {
-        int randomNumber = Random.Range(0, LastChunk.Length);
+        randomNumber2 = Random.Range(0, LastChunk.Length);
 
         //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
         //Final = this.gameObject.transform.GetChild(5).gameObject;
-        Instantiate(LastChunk[randomNumber], UltimoCube.transform.position, Quaternion.identity);
+        Instantiate(LastChunk[randomNumber2], LastCube.transform.position, Quaternion.identity);
         //Instantiate(Final);
         triggers.SetActive(false);
     }
@@ -48,5 +56,10 @@ public class AutoGererateChunks : MonoBehaviour
         Instantiate(NextChunks[randomNumber], UltimoCube.transform.position, Quaternion.identity);
         //Instantiate(Final);
         triggers.SetActive(false);
+    }
+
+    public void Update()
+    {
+
     }
 }

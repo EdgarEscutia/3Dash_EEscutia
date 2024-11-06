@@ -1,4 +1,4 @@
-using Cinemachine;
+ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -183,24 +183,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GenerateLevels()
-    {
-        int contador = 0;
+   public void GenerateLevels()
+   {
+       int contador = 0;
 
-        if(contador == 5)
-        {
-            autoGererateChunks.AutoGenerateMeta();
+       if(contador == 1)
+       {
+           autoGererateChunks.AutoGenerateMeta();
 
-            contador++;
-        }
-        if(contador == 0)
-        {
-            autoGererateChunks.AutoGenerate();
-            contador++;
-        }
-        else
-        {
-            autoGererateChunks.NextChunk();
-        }
-    }
+           contador++;
+       }
+       if(contador == 0)
+       {
+           autoGererateChunks.AutoGenerate();
+           contador++;
+       }
+       else
+       {
+           autoGererateChunks.NextChunk();
+       }
+   }
 }
