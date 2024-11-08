@@ -7,10 +7,11 @@ using UnityEngine;
 public class Chunk_lastCube : MonoBehaviour
 {
     public GameObject[] ChunksNormales;
+
     public GameObject[] ChunkEntradaPortal;
     public GameObject[] ChunkSalidaPortal;
-
-
+    public GameObject[] ChunkEntrePortal;
+    
     public GameObject[] ChunkMeta;
 
     public GameObject UltimoCube;
