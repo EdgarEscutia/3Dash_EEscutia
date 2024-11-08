@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class Chunk_lastCube : MonoBehaviour
 {
-    public GameObject[] ChunksNormales;
+    public GameObject[] ChunksFaciles;
+    public GameObject[] ChunksMedianos;
+    public GameObject[] ChunksDificiles;
+
 
     public GameObject[] ChunkEntradaPortal;
     public GameObject[] ChunkSalidaPortal;
@@ -18,18 +21,49 @@ public class Chunk_lastCube : MonoBehaviour
     public GameObject trigger;
     [SerializeField] string layerPlayer;
 
+
+    GameObject randomChunk;
+
     bool alreadyTriggered;
-    //public GameObject[] nextChunk;
 
     public void OnTriggerEnter(Collider other)
     {
        
-        if (other.gameObject.layer == LayerMask.NameToLayer(layerPlayer) && !alreadyTriggered && GameManager.instance.contador < 6) //OBSTACULOS
+        if (other.gameObject.layer == LayerMask.NameToLayer(layerPlayer) && !alreadyTriggered && (GameManager.instance.contador < 6 || GameManager.instance.contador < 10 && GameManager.instance.contador > 12)) //NORMAL
         {
-            Debug.Log("Trigger activated for the first time!");
-
+            float randomNumber = Random.Range(0, 1);
             alreadyTriggered = true;
-            GameObject randomChunk = ChunksNormales[Random.Range(0, ChunksNormales.Length)];
+
+
+
+            // % DE DIFICULTAD
+            if(randomNumber <= 0.7f)
+            {
+                randomChunk = ChunksFaciles[Random.Range(0, ChunksFaciles.Length)];
+            }
+            else if(randomNumber > 0.7f && randomNumber <= 0.9f)
+            {
+                randomChunk = ChunksMedianos[Random.Range(0, ChunksMedianos.Length)];
+            }
+            else if(randomNumber > 0.9f)
+            {
+                randomChunk = ChunksDificiles[Random.Range(0, ChunksDificiles.Length)];
+            }
+            
+
+            
+            Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
+
+            trigger.SetActive(false);
+
+            GameManager.instance.contador++;
+            //Debug.Log(GameManager.instance.contador);
+
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer(layerPlayer) && !alreadyTriggered && GameManager.instance.contador == 6)
+        {
+            alreadyTriggered = true;
+            GameObject randomChunk = ChunkEntradaPortal[Random.Range(0, ChunkEntradaPortal.Length)];
 
             //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
             //Final = this.gameObject.transform.GetChild(5).gameObject;
@@ -40,11 +74,6 @@ public class Chunk_lastCube : MonoBehaviour
 
             GameManager.instance.contador++;
             Debug.Log(GameManager.instance.contador);
-
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer(layerPlayer) && !alreadyTriggered && GameManager.instance.contador == 6)
-        {
-            //ENTRADA PORTALES
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer(layerPlayer) && !alreadyTriggered && GameManager.instance.contador > 6 && GameManager.instance.contador < 10)
         {
@@ -64,21 +93,5 @@ public class Chunk_lastCube : MonoBehaviour
         {
             //META
         }
-        
-
-        //if (opcion == 1)
-        //{
-        //    GameObject randomChunk = Chunks[Random.Range(0, Chunks.Length)];
-
-            //    //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
-            //    //Final = this.gameObject.transform.GetChild(5).gameObject;
-            //    Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
-            //    //Instantiate(Final);
-
-            //    trigger.SetActive(false);
-            //    opcion = 0;
-
-            //}
-
     }
 }

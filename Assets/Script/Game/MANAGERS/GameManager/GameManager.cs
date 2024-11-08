@@ -189,23 +189,11 @@ public class GameManager : MonoBehaviour
     }
     public int contador = 0;
     public void GenerateLevels()
-   {
-       
-
-       //if(contador == 1)
-       //{
-       //    autoGererateChunks.AutoGenerateMeta();
-
-           
-       //}
+    {  
        if(contador == 0)
        {
            autoGererateChunks.AutoGenerate();
             contador = 1;
        }
-       //else
-       //{
-       //    autoGererateChunks.NextChunk();
-       //}
-   }
+    }
 }

@@ -4,27 +4,39 @@ using UnityEngine;
 
 public class AutoGererateChunks : MonoBehaviour
 {
+    public GameObject[] ChunksFaciles;
+    public GameObject[] ChunksMedianos;
+    public GameObject[] ChunksDificiles;
 
-    public GameObject[] Chunks;
     public GameObject UltimoCube;
-    public GameObject[] LastChunk;
-    public GameObject[] NextChunks;
+
+
+
+
 
     public GameObject triggers;
 
 
-    Chunk_lastCube LastCube;
-    int randomNumber1;
-    int randomNumber2;
-
+    GameObject randomChunk;
     public void AutoGenerate()
     {
         if(GameManager.instance.contador == 0)
         {
-            randomNumber1 = Random.Range(0, Chunks.Length);
 
-            GameObject randomChunk = Chunks[randomNumber1];
+            float randomNumber = Random.Range(0, 1);
 
+            if (randomNumber <= 0.7f)
+            {
+                randomChunk = ChunksFaciles[Random.Range(0, ChunksFaciles.Length)];
+            }
+            else if (randomNumber > 0.7f && randomNumber <= 0.9f)
+            {
+                randomChunk = ChunksMedianos[Random.Range(0, ChunksMedianos.Length)];
+            }
+            else if (randomNumber > 0.9f)
+            {
+                randomChunk = ChunksDificiles[Random.Range(0, ChunksDificiles.Length)];
+            }
             //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
             //Final = this.gameObject.transform.GetChild(5).gameObject;
             Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
@@ -33,7 +45,7 @@ public class AutoGererateChunks : MonoBehaviour
             triggers.SetActive(false);
             //UltimoCube = 
             Debug.Log("Entra Autogenerate");
-
+            GameManager.instance.contador = 6;
         }
 
     }
