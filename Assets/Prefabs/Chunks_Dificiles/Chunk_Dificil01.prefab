@@ -7714,6 +7714,7 @@ MonoBehaviour:
   - {fileID: 3799537757121364730, guid: 982d6150df95b9b48ab094c74afc4dcd, type: 3}
   UltimoCube: {fileID: 2593770461411387295}
   trigger: {fileID: 8148574301247013314}
+  layerPlayer: Player
 --- !u!1 &8228819992339675404
 GameObject:
   m_ObjectHideFlags: 0
