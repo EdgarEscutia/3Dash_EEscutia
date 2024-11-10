@@ -159,16 +159,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c40e143d1cd114ba5a8f2fab506d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChunksFaciles: []
-  ChunksMedianos: []
-  ChunksDificiles: []
-  ChunkEntradaPortal: []
+  ChunksFaciles:
+  - {fileID: 4942203956033653548}
+  ChunksMedianos:
+  - {fileID: 3799537757121364730, guid: 982d6150df95b9b48ab094c74afc4dcd, type: 3}
+  ChunksDificiles:
+  - {fileID: 4979791975744450470, guid: 40f46a65e90531248a39e0dc5bf0d131, type: 3}
+  - {fileID: 2444366372201890662, guid: ee91fd444cc3a684cba9be322d43c1d0, type: 3}
+  ChunkEntradaPortal:
+  - {fileID: 8357751020331257626, guid: 122432cd0643fea43842edab44a3b391, type: 3}
   ChunkSalidaPortal: []
-  ChunkEntrePortal: []
-  ChunkMeta: []
+  ChunkEntrePortal:
+  - {fileID: 6992871710407988143, guid: a839c88606f4d8241ae77a6e099a1b07, type: 3}
+  - {fileID: 2455084197593882104, guid: 0622774adc7cb31499f541ee293307b7, type: 3}
+  ChunkMeta:
+  - {fileID: 2622028921336869721, guid: f2b2df0e3c704a44c909b7dd1f20225c, type: 3}
   UltimoCube: {fileID: 7952549013874350645}
   trigger: {fileID: 1864036377247188694}
-  layerPlayer: 
+  layerPlayer: Player
 --- !u!1 &3223863094335284708
 GameObject:
   m_ObjectHideFlags: 0

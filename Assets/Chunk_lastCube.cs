@@ -28,9 +28,10 @@ public class Chunk_lastCube : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-       
+        Debug.Log("ENTRAAAAAA");
         if (other.gameObject.layer == LayerMask.NameToLayer(layerPlayer) && !alreadyTriggered && (GameManager.instance.contador < 6 || GameManager.instance.contador < 10 && GameManager.instance.contador > 12)) //NORMAL
         {
+            
             float randomNumber = Random.Range(0, 1);
             alreadyTriggered = true;
 
@@ -65,10 +66,7 @@ public class Chunk_lastCube : MonoBehaviour
             alreadyTriggered = true;
             GameObject randomChunk = ChunkEntradaPortal[Random.Range(0, ChunkEntradaPortal.Length)];
 
-            //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
-            //Final = this.gameObject.transform.GetChild(5).gameObject;
             Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
-            //Instantiate(Final);
 
             trigger.SetActive(false);
 

@@ -37,13 +37,11 @@ public class AutoGererateChunks : MonoBehaviour
             {
                 randomChunk = ChunksDificiles[Random.Range(0, ChunksDificiles.Length)];
             }
-            //randomChunk.transform.position = new Vector3(-1.151364f, 0.451f, -0.1264174f);
-            //Final = this.gameObject.transform.GetChild(5).gameObject;
+
             Instantiate(randomChunk, UltimoCube.transform.position, Quaternion.identity);
-            //Instantiate(Final);
 
             triggers.SetActive(false);
-            //UltimoCube = 
+
             Debug.Log("Entra Autogenerate");
             GameManager.instance.contador = 6;
         }
