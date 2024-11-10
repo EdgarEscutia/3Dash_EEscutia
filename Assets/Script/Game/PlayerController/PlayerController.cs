@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
 
         Vector3 moveVector = new Vector3(1, 0, 0);
-        rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed + playerAcceleration));
+        rb.MovePosition(transform.position + moveVector * Time.deltaTime * (moveSpeed /*+ playerAcceleration*/));
 
         if (playerAcceleration < 5) //ACCELERACION LIMITE DE PERSONAJE
         {
