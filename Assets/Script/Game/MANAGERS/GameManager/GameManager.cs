@@ -1,4 +1,5 @@
  using Cinemachine;
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     public ObstacleManager obstacleManager;
     public PortalManager portalManager;
     public BarraPortal barraPortal;
+    public menuJuego MenuJuego;
 
     public AutoGererateChunks autoGererateChunks;
 
@@ -39,8 +41,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera camara_Principal;
 
-    [Header("CANVAS")]
-    [SerializeField] Canvas MenuInGame;
+
 
     public void ActivarSiguienteChunk()
     {
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    bool activarGameMenu;
+
     void Update()
     {
 
@@ -62,7 +65,18 @@ public class GameManager : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            MenuInGame.GetComponent<Canvas>().enabled = true;
+            
+            if(activarGameMenu == true)
+            {
+                MenuJuego.Pause();
+                activarGameMenu = false;
+            }
+            else if (activarGameMenu == false)
+            {
+                MenuJuego.Restart();
+                activarGameMenu = true;
+            }
+
         }
        
         ActivarBottonRojo();
