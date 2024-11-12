@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2276.9407, g: 2431.3987, b: 3570.0903, a: 1}
+  m_IndirectSpecularColor: {r: 2293.2014, g: 2469.2815, b: 3677.7544, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7472,17 +7472,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 929484879}
+  - component: {fileID: 929484880}
   - component: {fileID: 929484878}
   - component: {fileID: 929484877}
   - component: {fileID: 929484876}
-  - component: {fileID: 929484880}
   m_Layer: 5
   m_Name: MenuJuego_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &929484876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7579,9 +7579,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MenuInGame: {fileID: 929484878}
-  Resume: {fileID: 0}
-  Menu: {fileID: 0}
-  Salir: {fileID: 0}
+  Resume: {fileID: 1567409837}
+  Menu: {fileID: 866319170}
+  Salir: {fileID: 1637512246}
+  MenuPrincipal: MenuPrincipal
 --- !u!1 &929743273
 GameObject:
   m_ObjectHideFlags: 0
@@ -8728,7 +8729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037161582}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.121321835, y: 0.20591271, z: -0.025736308, w: 0.97067946}
+  m_LocalRotation: {x: 0.121321835, y: 0.20591272, z: -0.025736311, w: 0.97067946}
   m_LocalPosition: {x: -15.430112, y: -2.4439116, z: -31.24737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15362,7 +15363,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.121321835, y: 0.20591271, z: -0.025736308, w: 0.97067946}
+  m_LocalRotation: {x: 0.121321835, y: 0.20591272, z: -0.025736311, w: 0.97067946}
   m_LocalPosition: {x: -16.09, y: 4.85, z: -12.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

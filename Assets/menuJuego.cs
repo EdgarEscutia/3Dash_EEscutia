@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class menuJuego : MonoBehaviour
@@ -13,6 +16,8 @@ public class menuJuego : MonoBehaviour
     [SerializeField] Button Menu;
     [SerializeField] Button Salir;
 
+    [Header("NOMBRE LVL's")]
+    [SerializeField] string MenuPrincipal;
 
     public void Restart()
     {
@@ -24,5 +29,21 @@ public class menuJuego : MonoBehaviour
     {
         MenuInGame.gameObject.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    public void OnEnable()
+    {
+        Resume.onClick.AddListener(Restart);
+        Menu.onClick.AddListener(EscenaMenu);
+        Salir.onClick.AddListener(EscenaSalir);
+
+    }
+    public void EscenaMenu()
+    { SceneManager.LoadScene(MenuPrincipal); }
+
+    void EscenaSalir()
+    {
+        Application.Quit();
+        //EditorApplication.isPlaying = false;
     }
 }
