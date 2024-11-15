@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2262.2756, g: 2403.9143, b: 3501.481, a: 1}
+  m_IndirectSpecularColor: {r: 2259.7502, g: 2401.5198, b: 3499.5552, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -490,8 +490,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChunksFaciles:
   - {fileID: 4942203956033653548, guid: f817d86ca9560ae4a858909ea098f5f6, type: 3}
+  - {fileID: 3176010285665501534, guid: 5dcac7a494d06504b84e2c1006543a70, type: 3}
+  - {fileID: 1075380446036767996, guid: 99f7ce4c2eef1064ebed1f81a5785c6d, type: 3}
   ChunksMedianos:
   - {fileID: 3799537757121364730, guid: 982d6150df95b9b48ab094c74afc4dcd, type: 3}
+  - {fileID: 192346344890937090, guid: 465fcb62cd6a0a045920ad30310744a9, type: 3}
   ChunksDificiles:
   - {fileID: 4979791975744450470, guid: 40f46a65e90531248a39e0dc5bf0d131, type: 3}
   - {fileID: 2444366372201890662, guid: ee91fd444cc3a684cba9be322d43c1d0, type: 3}
@@ -13892,7 +13895,7 @@ MonoBehaviour:
   particle: {fileID: 475828275}
   portalManager: {fileID: 926903137}
   inicialMoveSpeed: 6
-  moveSpeed: 6
+  moveSpeed: 7
   playerAcceleration: 0.5
   jumpSpeed: 14
 --- !u!65 &1592164438
