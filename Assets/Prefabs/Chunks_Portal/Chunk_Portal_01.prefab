@@ -60,6 +60,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7612708272744728565}
+  - component: {fileID: 3496421353067587016}
   - component: {fileID: 1006014557154978576}
   m_Layer: 15
   m_Name: Trigger_Siguiente_Chunk
@@ -83,6 +84,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8695754490608273715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3496421353067587016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522777099811896277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c40e143d1cd114ba5a8f2fab506d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChunksFaciles:
+  - {fileID: 4942203956033653548, guid: f817d86ca9560ae4a858909ea098f5f6, type: 3}
+  - {fileID: 3176010285665501534, guid: 5dcac7a494d06504b84e2c1006543a70, type: 3}
+  - {fileID: 1075380446036767996, guid: 99f7ce4c2eef1064ebed1f81a5785c6d, type: 3}
+  - {fileID: 7792210967541217877, guid: 255f3e5a128e8a74ca345ada061b5008, type: 3}
+  - {fileID: 2907794050890058452, guid: c01e5d0252ce69e44a509b0f696042c5, type: 3}
+  - {fileID: 3129642899199627525, guid: 9df3f806fd38c96468293d5375b8bb13, type: 3}
+  ChunksMedianos:
+  - {fileID: 3799537757121364730, guid: 982d6150df95b9b48ab094c74afc4dcd, type: 3}
+  - {fileID: 1347119634074616345, guid: 27dfc53e20323fe4eb5e33440181886b, type: 3}
+  - {fileID: 192346344890937090, guid: 465fcb62cd6a0a045920ad30310744a9, type: 3}
+  ChunksDificiles:
+  - {fileID: 4979791975744450470, guid: 40f46a65e90531248a39e0dc5bf0d131, type: 3}
+  - {fileID: 2444366372201890662, guid: ee91fd444cc3a684cba9be322d43c1d0, type: 3}
+  ChunkEntradaPortal:
+  - {fileID: 8357751020331257626, guid: 122432cd0643fea43842edab44a3b391, type: 3}
+  ChunkSalidaPortal:
+  - {fileID: 3956185703862626438, guid: 82943064b3a8be14389b65faf58289ba, type: 3}
+  ChunkEntrePortal:
+  - {fileID: 2455084197593882104, guid: 0622774adc7cb31499f541ee293307b7, type: 3}
+  - {fileID: 4888073439929249080, guid: 42f83cfe0a2fbd44cbf66d167c33867c, type: 3}
+  ChunkMeta:
+  - {fileID: 2622028921336869721, guid: f2b2df0e3c704a44c909b7dd1f20225c, type: 3}
+  UltimoCube: {fileID: 1158605667582399841}
+  trigger: {fileID: 1522777099811896277}
+  layerPlayer: Player
 --- !u!65 &1006014557154978576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,6 +242,7 @@ Transform:
   - {fileID: 1289276724517203064}
   - {fileID: 2164841157348583114}
   - {fileID: 4773781578296605962}
+  - {fileID: 390980130030882610}
   - {fileID: 3979693515030251623}
   - {fileID: 2618694367921501767}
   - {fileID: 1632210696153280696}
@@ -251,7 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289276724517203064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cubes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +349,6 @@ Transform:
   - {fileID: 8875185222948594485}
   - {fileID: 3493466673310585048}
   - {fileID: 1780864333287233160}
-  - {fileID: 390980130030882610}
   m_Father: {fileID: 8695754490608273715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7812329713905009915
@@ -4947,22 +4986,22 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1289276724517203064}
+    m_TransformParent: {fileID: 8695754490608273715}
     m_Modifications:
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.940638
+      value: 38.79001
       objectReference: {fileID: 0}
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1172302
+      value: -0.20900011
       objectReference: {fileID: 0}
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4093337
+      value: 11.79623
       objectReference: {fileID: 0}
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
@@ -5002,7 +5041,7 @@ PrefabInstance:
     - target: {fileID: 8997050345873881510, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_Name
-      value: cube (39)
+      value: LastCube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5012,6 +5051,12 @@ PrefabInstance:
 --- !u!4 &390980130030882610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7840696755768192199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1158605667582399841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8997050345873881510, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
     type: 3}
   m_PrefabInstance: {fileID: 7840696755768192199}
   m_PrefabAsset: {fileID: 0}
