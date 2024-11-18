@@ -876,6 +876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70af05bc727b2354b918694ed0d95a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FinishCanvas: {fileID: 0}
+  Menu: {fileID: 0}
+  Salir: {fileID: 0}
+  MenuPrincipal: MenuPrincipal
 --- !u!4 &5864306451370119145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7934869216584873659, guid: 9cb84ebfcc76d7a418fac69fa3bddf59,

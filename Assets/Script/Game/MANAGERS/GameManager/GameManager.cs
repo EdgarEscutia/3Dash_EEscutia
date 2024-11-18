@@ -99,6 +99,8 @@ public class GameManager : MonoBehaviour
     {
         particle.particle_Red = 0;
         particle.particle_Blue = 0;
+
+        playerController.moveSpeed = 7f;
     }
     public void RestartCameras()
     {
@@ -140,6 +142,7 @@ public class GameManager : MonoBehaviour
         if(particle.particle_Red < 5)
         {
             particle.particle_Red++;
+            Debug.Log(particle.particle_Blue);
         }
         else
         {
@@ -165,7 +168,7 @@ public class GameManager : MonoBehaviour
         camara_Red.enabled = true;
         camara_Principal.enabled = false;
 
-        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.8f;
+        playerController.moveSpeed = playerController.inicialMoveSpeed * 1.2f;
         particle.particle_Red = 0;
     }
     public void activarAzul() //ACTIVAR AZUL
@@ -174,7 +177,7 @@ public class GameManager : MonoBehaviour
         camara_Blue.enabled = true;
         camara_Principal.enabled = false;
 
-        playerController.moveSpeed = playerController.inicialMoveSpeed / 1.5f;
+        playerController.moveSpeed = playerController.inicialMoveSpeed / 1.2f;
         particle.particle_Red = 0;
 
         RestartParticle();
