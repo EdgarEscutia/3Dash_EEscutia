@@ -42,6 +42,7 @@ public class BarraEnergia : MonoBehaviour
         Energia.fillAmount = EnergiaActual / 100f;
         start = true;
     }
+
     void Update()
     {
         if(start)

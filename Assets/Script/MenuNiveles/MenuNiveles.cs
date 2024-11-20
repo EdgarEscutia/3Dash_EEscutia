@@ -14,21 +14,23 @@ public class MenuNiveles : MonoBehaviour
     [SerializeField] Button EscenaAnterior;
 
     [SerializeField] string Level1;
-    //[SerializeField] string Level2;
+    [SerializeField] string Tutorial;
     //[SerializeField] string Level3;
     [SerializeField] string VolverMenu;
     public void OnEnable()
     {
         Nivel1.onClick.AddListener(EscenaNivel1);
-        Nivel2.onClick.AddListener(EscenaNivel2);
+        Nivel2.onClick.AddListener(EscenaTutorial);
         Nivel3.onClick.AddListener(EscenaNivel3);
         EscenaAnterior.onClick.AddListener(LastScene);
     }
 
+
+    void EscenaTutorial()
+    { SceneManager.LoadScene(Tutorial);}
     void EscenaNivel1()
     { SceneManager.LoadScene(Level1); }
-    void EscenaNivel2()
-    { /*SceneManager.LoadScene(Level2);*/}
+    
     void EscenaNivel3()
     { /*SceneManager.LoadScene(Level3);*/ }
 

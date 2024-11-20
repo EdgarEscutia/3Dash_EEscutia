@@ -44,8 +44,6 @@ public class PlayerController : MonoBehaviour
 
         //GUARDAR POSICION INICIAL
         respawnPos = transform.position;
-        
-       
     }
 
     void Update()
@@ -76,7 +74,6 @@ public class PlayerController : MonoBehaviour
         {
             playerAcceleration = playerAcceleration + 0.01f;
         }
-
     }
     public void AccelerationNull() //FUNCION ACCELERACION
     {
@@ -84,13 +81,12 @@ public class PlayerController : MonoBehaviour
         //moveSpeed = 10.0f * Time.deltaTime;
     }
     public void Respawn() //REVIVIR AL INICIO DEL NIVEL
-    {
-        
+    {   
         rb.velocity = new Vector3(0, 0, 0) *Time.deltaTime;
         rb.angularVelocity = Vector3.zero;
         transform.position = respawnPos;
-
-
+        Tutorial_Canvas.instance.count = 0;
+        Tutorial_Canvas.instance.separar = 0;
     }
    
     public void OnTriggerEnter(Collider other) //COLLIDERS
@@ -105,7 +101,6 @@ public class PlayerController : MonoBehaviour
         }
         if(other.gameObject.layer ==9) //PARTICULA ROJA
         {
-            Debug.Log("PUTAAAAA");
             gameManager.SumarParticulasRojas();
         }
         if (other.gameObject.layer == 10) //PARTICULA AZUL
@@ -118,13 +113,13 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.layer == 12) //PORTAL ENTRADA
         {
-            Debug.Log("Salida del portal");
+            portalManager.FinishPortal();
         }
-        if (other.gameObject.layer == 13) //PORTAL ENTRADA
+        if (other.gameObject.layer == 13) //SUMAR BARRA ENERGIA
         {
             portalManager.AñadirBarraPortal();
         }
-        if (other.gameObject.layer == 14) //PORTAL ENTRADA
+        if (other.gameObject.layer == 14) //RESTAR BARRA ENERGIA
         {            
             portalManager.QuitarBarraPortal();
         }

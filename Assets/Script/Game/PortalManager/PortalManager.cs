@@ -19,7 +19,15 @@ public class PortalManager : MonoBehaviour
         playerController.AccelerationNull();
         barraEnergia.Restart_Barra();
         barraPortal.ActivarBarraPortal();
+
     }
+
+    public void FinishPortal()
+    {
+        barraPortal.DesactivarBarra();
+        
+    }
+
 
     public void AñadirBarraPortal()
     {
