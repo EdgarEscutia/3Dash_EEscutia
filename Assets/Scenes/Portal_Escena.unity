@@ -253,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45315116}
-  - component: {fileID: 45315115}
+  - component: {fileID: 45315117}
   m_Layer: 0
   m_Name: Script_AutoGenerateLevel
   m_TagString: Untagged
@@ -261,33 +261,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &45315115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45315114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e612057dce2c944b232a11bc8e10be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChunksFaciles:
-  - {fileID: 4942203956033653548, guid: f817d86ca9560ae4a858909ea098f5f6, type: 3}
-  - {fileID: 3176010285665501534, guid: 5dcac7a494d06504b84e2c1006543a70, type: 3}
-  - {fileID: 1075380446036767996, guid: 99f7ce4c2eef1064ebed1f81a5785c6d, type: 3}
-  - {fileID: 7792210967541217877, guid: 255f3e5a128e8a74ca345ada061b5008, type: 3}
-  - {fileID: 2907794050890058452, guid: c01e5d0252ce69e44a509b0f696042c5, type: 3}
-  ChunksMedianos:
-  - {fileID: 3799537757121364730, guid: 982d6150df95b9b48ab094c74afc4dcd, type: 3}
-  - {fileID: 1347119634074616345, guid: 27dfc53e20323fe4eb5e33440181886b, type: 3}
-  - {fileID: 192346344890937090, guid: 465fcb62cd6a0a045920ad30310744a9, type: 3}
-  ChunksDificiles:
-  - {fileID: 4979791975744450470, guid: 40f46a65e90531248a39e0dc5bf0d131, type: 3}
-  - {fileID: 2444366372201890662, guid: ee91fd444cc3a684cba9be322d43c1d0, type: 3}
-  UltimoCube: {fileID: 1281531394}
-  triggers: {fileID: 686817476}
 --- !u!4 &45315116
 Transform:
   m_ObjectHideFlags: 0
@@ -304,6 +277,22 @@ Transform:
   - {fileID: 686817477}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45315117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45315114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86169c5c7e6bc5848a73379cba9601c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChunksEntradaPortal:
+  - {fileID: 8357751020331257626, guid: 122432cd0643fea43842edab44a3b391, type: 3}
+  UltimoCube: {fileID: 1281531394}
+  triggers: {fileID: 686817476}
 --- !u!1 &46730416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4257,7 +4246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037161582}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.121321835, y: 0.20591272, z: -0.025736311, w: 0.97067946}
+  m_LocalRotation: {x: 0.121321835, y: 0.20591271, z: -0.025736308, w: 0.97067946}
   m_LocalPosition: {x: -15.430112, y: -2.4439116, z: -30.92737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5113,14 +5102,14 @@ MonoBehaviour:
   portalManager: {fileID: 926903137}
   barraPortal: {fileID: 1492861855}
   MenuJuego: {fileID: 929484880}
-  autoGererateChunks: {fileID: 45315115}
+  autoGererateChunks: {fileID: 0}
   portalAutoGererateChunks: {fileID: 0}
   scoreDead: {fileID: 207385917}
   deathCount: 1
   camara_Red: {fileID: 907135722}
   camara_Blue: {fileID: 118719327}
   camara_Principal: {fileID: 1037161583}
-  currentScene: Nivel1
+  currentScene: Portal_Escena
   contador: 0
 --- !u!4 &1308127697
 Transform:
@@ -7092,7 +7081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.121321835, y: 0.20591272, z: -0.025736311, w: 0.97067946}
+  m_LocalRotation: {x: 0.121321835, y: 0.20591271, z: -0.025736308, w: 0.97067946}
   m_LocalPosition: {x: -16.09, y: 4.85, z: -12.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

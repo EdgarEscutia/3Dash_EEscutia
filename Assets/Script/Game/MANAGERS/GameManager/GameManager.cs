@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera camara_Principal;
 
+    [Header("ESCENAS")]
+    [SerializeField] string currentScene;
 
 
     public void ActivarSiguienteChunk()
@@ -207,10 +210,18 @@ public class GameManager : MonoBehaviour
     }
     public int contador = 0;
     public void GenerateLevels()
-    {  
+    {
        if(contador == 0)
        {
-           autoGererateChunks.AutoGenerate();
+            if(currentScene == "Nivel1")
+            {
+                autoGererateChunks.AutoGenerate();
+            }
+            if(currentScene == "Portal_Escena")
+            {
+                Debug.Log(contador);
+                Portal_AutoGererateChunks.instance.AutoGeneratePortal();
+            }
             contador = 1;
        }
     }

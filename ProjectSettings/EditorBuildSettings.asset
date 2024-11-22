@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: f3f6e275640d8fb4690d39795990820c
+  - enabled: 1
+    path: Assets/Scenes/Portal_Escena.unity
+    guid: dac270b59b50af64a87054100149c9f2
   m_configObjects: {}
