@@ -340,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 2393375571072031045}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.702011, y: -1.0813441, z: 18.520948}
+  m_LocalPosition: {x: 3.321373, y: -1.1390347, z: 17.95323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -348,10 +348,8 @@ Transform:
   - {fileID: 4387624791058460726}
   - {fileID: 5717921119949803340}
   - {fileID: 2148841118904287779}
-  - {fileID: 7581515216581491956}
   - {fileID: 8519119316656407547}
   - {fileID: 4071997369853365546}
-  - {fileID: 5629991709928101165}
   - {fileID: 3197880967284677041}
   - {fileID: 770414704181194592}
   - {fileID: 7396491539701603791}
@@ -371,7 +369,7 @@ GameObject:
   - component: {fileID: 338911934439486173}
   - component: {fileID: 6507627591444417116}
   m_Layer: 8
-  m_Name: cube (213)
+  m_Name: 1rst_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,11 +384,11 @@ Transform:
   m_GameObject: {fileID: 2549692469647666970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.321373, y: 1.1390347, z: -17.95323}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4802228445854563672}
+  m_Father: {fileID: 6482262738412116032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2838807295325601144
 MeshFilter:
@@ -476,7 +474,7 @@ GameObject:
   - component: {fileID: 2334075690728910045}
   - component: {fileID: 2128651513386136087}
   m_Layer: 8
-  m_Name: cube (122)
+  m_Name: Last_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,11 +489,11 @@ Transform:
   m_GameObject: {fileID: 4225932040704924912}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.638626, y: 1.1390347, z: -17.947367}
+  m_LocalPosition: {x: 10.959999, y: 0, z: 0.0058631897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4802228445854563672}
+  m_Father: {fileID: 6482262738412116032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2957622674522853611
 MeshFilter:
@@ -1228,6 +1226,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4802228445854563672}
+  - {fileID: 5629991709928101165}
+  - {fileID: 7581515216581491956}
   - {fileID: 7610279508797775693}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1352,17 +1352,17 @@ PrefabInstance:
     - target: {fileID: 1787238418057426558, guid: ff3e21ef2dfe7d047b067272eea14956,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.731163
+      value: 5.350525
       objectReference: {fileID: 0}
     - target: {fileID: 1787238418057426558, guid: ff3e21ef2dfe7d047b067272eea14956,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.803212
+      value: 12.7455225
       objectReference: {fileID: 0}
     - target: {fileID: 1787238418057426558, guid: ff3e21ef2dfe7d047b067272eea14956,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.33894044
+      value: -0.90665823
       objectReference: {fileID: 0}
     - target: {fileID: 1787238418057426558, guid: ff3e21ef2dfe7d047b067272eea14956,
         type: 3}
@@ -1402,7 +1402,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 186471114942992728, guid: ff3e21ef2dfe7d047b067272eea14956,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5526962889738929088}
   m_SourcePrefab: {fileID: 100100000, guid: ff3e21ef2dfe7d047b067272eea14956, type: 3}
 --- !u!4 &7610279508797775693 stripped
 Transform:
@@ -1410,3 +1414,34 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8165218793810635059}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8342589860156110955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 186471114942992728, guid: ff3e21ef2dfe7d047b067272eea14956,
+    type: 3}
+  m_PrefabInstance: {fileID: 8165218793810635059}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5526962889738929088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342589860156110955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c40e143d1cd114ba5a8f2fab506d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChunksFaciles: []
+  ChunksMedianos: []
+  ChunksDificiles: []
+  ChunkEntradaPortal: []
+  ChunkSalidaPortal: []
+  ChunkEntrePortal:
+  - {fileID: 6992871710407988143, guid: a839c88606f4d8241ae77a6e099a1b07, type: 3}
+  - {fileID: 2455084197593882104, guid: 0622774adc7cb31499f541ee293307b7, type: 3}
+  - {fileID: 4888073439929249080, guid: 42f83cfe0a2fbd44cbf66d167c33867c, type: 3}
+  ChunkMeta: []
+  UltimoCube: {fileID: 4225932040704924912}
+  trigger: {fileID: 8342589860156110955}
+  layerPlayer: Player
