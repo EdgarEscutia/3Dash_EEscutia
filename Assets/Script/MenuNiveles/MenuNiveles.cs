@@ -44,16 +44,28 @@ public class MenuNiveles : MonoBehaviour
     }
 
     void EscenaTutorial()
-    { SceneManager.LoadScene(Tutorial);}
+    { 
+        SceneManager.LoadScene(Tutorial);
+        Time.timeScale = 1f;
+    }
     void EscenaNivel1()
-    { SceneManager.LoadScene(Level1); }
+    { 
+        SceneManager.LoadScene(Level1);
+        Time.timeScale = 1f;
+    }
     
     void EscenaNivel3()
     { /*SceneManager.LoadScene(Level3);*/ }
 
     void EscenaPortal()
-    { SceneManager.LoadScene(PortalEscena); }
+    { 
+        SceneManager.LoadScene(PortalEscena);
+        Time.timeScale = 1f;
+    }
 
     void LastScene()
-    { SceneManager.LoadScene(VolverMenu); }
+    { 
+        SceneManager.LoadScene(VolverMenu);
+        Time.timeScale = 1f;
+    }
 }
