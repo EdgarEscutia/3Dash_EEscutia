@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public menuJuego MenuJuego;
 
     public AutoGererateChunks autoGererateChunks;
+    //public Portal_autoGererateChunks portal_autoGererateChunks;
 
     [Header("RESETS")]
     public TMP_Text scoreDead;
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //Debug.Log("Asigning this");
         instance = this;
     }
 

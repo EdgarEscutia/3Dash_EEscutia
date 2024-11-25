@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Portal_AutoGererateChunks : MonoBehaviour
 {
-    public static Portal_AutoGererateChunks instance;
+    public static Portal_AutoGererateChunks instance /*{ get { return new Portal_AutoGererateChunks();  } }*/;
 
     public GameObject[] ChunksEntradaPortal;
 
@@ -15,9 +16,14 @@ public class Portal_AutoGererateChunks : MonoBehaviour
 
     GameObject randomChunk;
 
+    void Awake()
+    {
+        instance = this;
+    }
+
     public void AutoGeneratePortal()
     {
-        Debug.Log("Entra Autogenerate Portales");
+        //Debug.Log("Entra Autogenerate Portales");
         
         if (GameManager.instance.contador == 0)
         {
@@ -27,7 +33,7 @@ public class Portal_AutoGererateChunks : MonoBehaviour
 
             triggers.SetActive(false);
 
-            Debug.Log("Entra Autogenerate Portales");
+            //Debug.Log("Entra Autogenerate Portales");
             GameManager.instance.contador = 5;
         }
 
