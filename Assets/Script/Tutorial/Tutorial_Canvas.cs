@@ -21,6 +21,10 @@ public class Tutorial_Canvas : MonoBehaviour
     public int count = 0;
     public int separar = 0;
 
+    void Awake()
+    {
+        instance = this;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
