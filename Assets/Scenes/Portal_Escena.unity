@@ -254,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45315116}
   - component: {fileID: 45315117}
+  - component: {fileID: 45315118}
   m_Layer: 0
   m_Name: Script_AutoGenerateLevel
   m_TagString: Untagged
@@ -293,6 +294,23 @@ MonoBehaviour:
   - {fileID: 8357751020331257626, guid: 122432cd0643fea43842edab44a3b391, type: 3}
   UltimoCube: {fileID: 1281531394}
   triggers: {fileID: 686817476}
+--- !u!114 &45315118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45315114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e612057dce2c944b232a11bc8e10be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChunksFaciles: []
+  ChunksMedianos: []
+  ChunksDificiles: []
+  UltimoCube: {fileID: 0}
+  triggers: {fileID: 0}
 --- !u!1 &46730416
 GameObject:
   m_ObjectHideFlags: 0
@@ -5103,7 +5121,6 @@ MonoBehaviour:
   barraPortal: {fileID: 1492861855}
   MenuJuego: {fileID: 929484880}
   autoGererateChunks: {fileID: 0}
-  portalAutoGererateChunks: {fileID: 0}
   scoreDead: {fileID: 207385917}
   deathCount: 1
   camara_Red: {fileID: 907135722}
