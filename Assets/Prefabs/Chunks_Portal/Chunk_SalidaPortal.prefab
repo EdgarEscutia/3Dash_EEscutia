@@ -66,6 +66,7 @@ Transform:
   - {fileID: 5090301104958905769}
   - {fileID: 4678383302039926597}
   - {fileID: 7084797317295844980}
+  - {fileID: 1869790840615856337}
   - {fileID: 716265823488811226}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,7 +110,6 @@ Transform:
   - {fileID: 8173935204108073120}
   - {fileID: 6903414614321840809}
   - {fileID: 2809694325267854189}
-  - {fileID: 1869790840615856337}
   m_Father: {fileID: 7949305714566861281}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &485672418833242459
@@ -383,8 +383,8 @@ MonoBehaviour:
   ChunkSalidaPortal: []
   ChunkEntrePortal: []
   ChunkMeta: []
-  UltimoCube: {fileID: 0}
-  trigger: {fileID: 0}
+  UltimoCube: {fileID: 904079143624585858}
+  trigger: {fileID: 3374135808856516272}
   layerPlayer: Player
 --- !u!4 &4678383302039926597 stripped
 Transform:
@@ -1262,22 +1262,22 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5090301104958905769}
+    m_TransformParent: {fileID: 7949305714566861281}
     m_Modifications:
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.589073
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.322419
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.056814313
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
@@ -1317,13 +1317,19 @@ PrefabInstance:
     - target: {fileID: 8997050345873881510, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
         type: 3}
       propertyPath: m_Name
-      value: cube (12)
+      value: UltimoCube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e52f8e0b4a782b498731b2c2a0df0f2, type: 3}
+--- !u!1 &904079143624585858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8997050345873881510, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8093002271254317860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1869790840615856337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7611868915540747253, guid: 9e52f8e0b4a782b498731b2c2a0df0f2,

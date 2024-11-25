@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Respawn() //REVIVIR AL INICIO DEL NIVEL
     {   
-        rb.velocity = new Vector3(0, 0, 0) *Time.deltaTime;
+        rb.velocity = new Vector3(0, 0, 0) * Time.deltaTime;
         rb.angularVelocity = Vector3.zero;
         transform.position = respawnPos;
         Tutorial_Canvas.instance.count = 0;
