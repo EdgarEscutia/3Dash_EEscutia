@@ -85,8 +85,8 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(0, 0, 0) * Time.deltaTime;
         rb.angularVelocity = Vector3.zero;
         transform.position = respawnPos;
-        Tutorial_Canvas.instance.count = 0;
-        Tutorial_Canvas.instance.separar = 0;
+        //Tutorial_Canvas.instance.count = 0;
+        //Tutorial_Canvas.instance.separar = 0;
     }
    
     public void OnTriggerEnter(Collider other) //COLLIDERS

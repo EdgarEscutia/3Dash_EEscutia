@@ -73,10 +73,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8319777457809221903, guid: c94a56818c3dcb841811b1d2e2b7586c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 009163f79850a35498608896cb72033a, type: 2}
     - target: {fileID: 919132149155446097, guid: c94a56818c3dcb841811b1d2e2b7586c,
         type: 3}
       propertyPath: m_Name
       value: Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c94a56818c3dcb841811b1d2e2b7586c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

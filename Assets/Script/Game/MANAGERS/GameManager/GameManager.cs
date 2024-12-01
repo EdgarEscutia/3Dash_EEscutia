@@ -47,6 +47,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] string currentScene;
 
 
+    public Canvas Canvas_BarraPortal;
+
+    //[Header("CANVAS")]
+    //[SerializeField] Canvas canva_Portal;
+
+
     public void ActivarSiguienteChunk()
     {
         chunkManager.ColocarSiguienteChunk();
@@ -95,6 +101,7 @@ public class GameManager : MonoBehaviour
         RestartCameras();
         barraPortal.DesactivarBarra();
         obstacleManager.RestartObstacles();
+        Canvas_BarraPortal.gameObject.SetActive(false);
         barraEnergia.Restart_Barra();
         scoreDead.text = $" ATTEMPT  {deathCount}";
         deathCount++;

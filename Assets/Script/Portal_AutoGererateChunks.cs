@@ -34,7 +34,7 @@ public class Portal_AutoGererateChunks : MonoBehaviour
             triggers.SetActive(false);
 
             //Debug.Log("Entra Autogenerate Portales");
-            GameManager.instance.contador = 5;
+            GameManager.instance.contador = 6;
         }
 
     }

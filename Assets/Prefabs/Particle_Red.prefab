@@ -78,10 +78,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2a452fc20546a524a855323a84cca7ad, type: 2}
+    - target: {fileID: -4258245136209610991, guid: 056d7502527dada4dbf03cdfb5e7ab89,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8433843
+      objectReference: {fileID: 0}
+    - target: {fileID: -4258245136209610991, guid: 056d7502527dada4dbf03cdfb5e7ab89,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0059
+      objectReference: {fileID: 0}
+    - target: {fileID: -4258245136209610991, guid: 056d7502527dada4dbf03cdfb5e7ab89,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 056d7502527dada4dbf03cdfb5e7ab89,
         type: 3}
       propertyPath: m_Name
-      value: model
+      value: Particle_Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
