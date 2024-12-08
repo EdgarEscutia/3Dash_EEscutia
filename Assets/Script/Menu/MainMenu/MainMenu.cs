@@ -11,14 +11,18 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Button salir;
     [SerializeField] Button Jugar;
     [SerializeField] Button Opciones;
+    [SerializeField] Button Creditos;
 
     [SerializeField] string options;
     [SerializeField] string Niveles;
+    [SerializeField] string creditos;
+
 
     public void OnEnable()
     {
         Opciones.onClick.AddListener(EscenaOpciones);
         Jugar.onClick.AddListener(EscenaNiveles);
+        Creditos.onClick.AddListener(EscenaNiveles);
         salir.onClick.AddListener(EscenaSalir);
 
     }
@@ -27,6 +31,9 @@ public class MainMenu : MonoBehaviour
     { SceneManager.LoadScene(options); }
     void EscenaNiveles()
     { SceneManager.LoadScene(Niveles); }
+
+    void EscenaCreditos()
+    { SceneManager.LoadScene(creditos); }
 
     void EscenaSalir()
     {
