@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
     {
         Opciones.onClick.AddListener(EscenaOpciones);
         Jugar.onClick.AddListener(EscenaNiveles);
-        Creditos.onClick.AddListener(EscenaNiveles);
+        Creditos.onClick.AddListener(EscenaCreditos);
         salir.onClick.AddListener(EscenaSalir);
 
     }

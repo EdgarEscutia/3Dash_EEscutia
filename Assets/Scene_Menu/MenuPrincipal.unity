@@ -2126,10 +2126,10 @@ MonoBehaviour:
   salir: {fileID: 1721869542}
   Jugar: {fileID: 653166105}
   Opciones: {fileID: 957033612}
-  Creditos: {fileID: 0}
+  Creditos: {fileID: 1672009416}
   options: MenuOptions
   Niveles: MenuNiveles
-  creditos: 
+  creditos: Creditos
 --- !u!114 &952217092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3127,7 +3127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.14322412, y: 0.056465678}
   m_AnchorMax: {x: 0.362388, y: 0.117000006}
-  m_AnchoredPosition: {x: -0.2999878, y: 0}
+  m_AnchoredPosition: {x: -0.29992676, y: 0}
   m_SizeDelta: {x: 240.901, y: 40.139008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672009416
